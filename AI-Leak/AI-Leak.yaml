@@ -1,0 +1,93 @@
+# NAME: AI-Leak
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: WebRTC/STUN 同 IP/DNS 洩漏檢測網站，配合 AI 節點用，令檢測結果同 AI 節點一致
+# 建議策略: 🧠 AI
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 68
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) AI-Leak.yaml (2026-10-31)
+# CHANGELOG:
+#   - 停用幾條太闊/無效嘅規則（見檔尾）
+#   - Loon 版：可另外喺主設定加 PROTOCOL,STUN 規則（Loon 原生支援）
+payload:
+
+  # # WebRTC / STUN / TURN
+  - AND,((NETWORK,udp),(DST-PORT,3478))
+  - AND,((NETWORK,udp),(DST-PORT,3479))
+  - AND,((NETWORK,udp),(DST-PORT,5349))
+  - AND,((NETWORK,udp),(DST-PORT,19302-19309))
+  - DOMAIN-SUFFIX,stun.l.google.com
+  - DOMAIN-SUFFIX,stun1.l.google.com
+  - DOMAIN-SUFFIX,stun2.l.google.com
+  - DOMAIN-SUFFIX,stun3.l.google.com
+  - DOMAIN-SUFFIX,stun4.l.google.com
+  - DOMAIN-SUFFIX,stun.services.mozilla.com
+  - DOMAIN-SUFFIX,global.stun.twilio.com
+  - DOMAIN-SUFFIX,stun.voip.blackberry.com
+
+  # # DNS / IP 洩漏檢測
+  - DOMAIN-SUFFIX,browserleaks.com
+  - DOMAIN-SUFFIX,ipleak.net
+  - DOMAIN-SUFFIX,dnsleaktest.com
+  - DOMAIN-SUFFIX,dnsleak.com
+  - DOMAIN-SUFFIX,whoer.net
+  - DOMAIN-SUFFIX,ip.sb
+  - DOMAIN-SUFFIX,ifconfig.me
+  - DOMAIN-SUFFIX,ipinfo.io
+  - DOMAIN-SUFFIX,ipapi.co
+  - DOMAIN-SUFFIX,ip-api.com
+  - DOMAIN-SUFFIX,ip.me
+  - DOMAIN-SUFFIX,checkip.amazonaws.com
+  - DOMAIN-SUFFIX,icanhazip.com
+  - DOMAIN-SUFFIX,ident.me
+  - DOMAIN-SUFFIX,myip.com
+  - DOMAIN-SUFFIX,whatismyipaddress.com
+  - DOMAIN-SUFFIX,whatismyip.com
+  - DOMAIN-SUFFIX,speedtest.net
+  - DOMAIN-SUFFIX,fast.com
+  - DOMAIN-SUFFIX,cloudflare.com
+  - DOMAIN-SUFFIX,cloudflare.net
+  - DOMAIN-SUFFIX,dns.google
+  - DOMAIN-SUFFIX,dns.google.com
+  - DOMAIN-SUFFIX,bash.ws
+  - DOMAIN-SUFFIX,surfsharkdns.com
+  - DOMAIN-SUFFIX,fastly.com
+  - DOMAIN-SUFFIX,digvps.com
+  - DOMAIN-SUFFIX,ipcheck.io
+  - DOMAIN-SUFFIX,ipcheck.ing
+  - DOMAIN-SUFFIX,ip.gs
+  - DOMAIN-SUFFIX,ipify.org
+  - DOMAIN-SUFFIX,seeip.org
+  - DOMAIN-SUFFIX,ipchicken.com
+  - DOMAIN-SUFFIX,myexternalip.com
+  - DOMAIN-SUFFIX,ipaddress.com
+  - DOMAIN-SUFFIX,dnschecker.org
+  - DOMAIN-SUFFIX,dnsleaktest.org
+  - DOMAIN-SUFFIX,browserleaks.net
+  - DOMAIN-SUFFIX,perfect-privacy.com
+  - DOMAIN-SUFFIX,ipleak.org
+  - DOMAIN-SUFFIX,ippure.com
+  - DOMAIN-SUFFIX,ippure.net
+  - DOMAIN-KEYWORD,ipcheck
+  - DOMAIN-KEYWORD,ip-check
+  - DOMAIN-KEYWORD,dnsleak
+  - DOMAIN-KEYWORD,ipleak
+  - DOMAIN-KEYWORD,whatismyip
+  - DOMAIN-KEYWORD,myip
+  - IP-CIDR,172.253.0.0/16,no-resolve
+  - IP-CIDR,162.159.0.0/16,no-resolve
+  - IP-CIDR,74.125.0.0/16,no-resolve
+
+  # === 補充 ===
+  - DOMAIN-SUFFIX,ipinfo.me
+  - DOMAIN-SUFFIX,iplark.com
+  - DOMAIN-SUFFIX,ping0.cc
+  - DOMAIN-SUFFIX,ipdata.co
+  - DOMAIN-SUFFIX,scamalytics.com
+
+  # === 已停用（範圍太闊/會誤傷），如真係需要請自行取消註解 ===
+  # - DOMAIN-KEYWORD,stun    ← 太闊：會中 stunning 等字
+  # - DOMAIN-KEYWORD,turn    ← 太闊：會中 return/turnitin 等字
+  # - DOMAIN-KEYWORD,cloudflare    ← 太闊：成個 Cloudflare 生態都會行 AI 節點
+  # - DOMAIN-SUFFIX,1.1.1.1    ← IP 唔係域名，規則無效；而且你 DNS 用 1.1.1.1，respect-rules 下會令 DNS 行 AI 節點
+  # - DOMAIN-SUFFIX,1.0.0.1    ← 同上

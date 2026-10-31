@@ -1,0 +1,446 @@
+# NAME: Direct
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 一定要直連：Apple/Google 基礎、PT/BT、學術等
+# 建議策略: DIRECT
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 298
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
+payload:
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Apple 基礎服務
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN,init.ess.apple.com
+  - DOMAIN,itunes.apple.com
+  - DOMAIN,smp-device-content.apple.com
+  - DOMAIN,time.apple.com
+  - DOMAIN-SUFFIX,weather-analytics-events.apple.com
+  - DOMAIN-SUFFIX,weather-data.apple.com
+  - DOMAIN-SUFFIX,weather-map.apple.com
+  - DOMAIN-KEYWORD,icloud.com
+  - DOMAIN-KEYWORD,push.apple.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Google 直連服務 (下載、推送、對時)
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN,mtalk.google.com
+  - DOMAIN,alt1-mtalk.google.com
+  - DOMAIN,alt2-mtalk.google.com
+  - DOMAIN,alt3-mtalk.google.com
+  - DOMAIN,alt4-mtalk.google.com
+  - DOMAIN,alt5-mtalk.google.com
+  - DOMAIN,alt6-mtalk.google.com
+  - DOMAIN,alt7-mtalk.google.com
+  - DOMAIN,alt8-mtalk.google.com
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com
+  - DOMAIN,update.googleapis.com
+  - DOMAIN,clientservices.googleapis.com
+  - DOMAIN,redirector.gvt1.com
+  - DOMAIN-SUFFIX,blog.google
+  - DOMAIN,ci.android.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # PT 站點 (必須直連)
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,m-team.cc
+  - DOMAIN-SUFFIX,hdsky.me
+  - DOMAIN-SUFFIX,ourbits.club
+  - DOMAIN-SUFFIX,pterclub.com
+  - DOMAIN-SUFFIX,keepfrds.com
+  - DOMAIN-SUFFIX,totheglory.im
+  - DOMAIN-SUFFIX,hdchina.org
+  - DOMAIN-SUFFIX,hdarea.co
+  - DOMAIN-SUFFIX,ptsbao.club
+  - DOMAIN-SUFFIX,pthome.net
+  - DOMAIN-SUFFIX,hdhome.org
+  - DOMAIN-SUFFIX,chdbits.co
+  - DOMAIN-SUFFIX,leaguehd.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 學術與資源站
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,acm.org
+  - DOMAIN-SUFFIX,doi.org
+  - DOMAIN-SUFFIX,ieee.org
+  - DOMAIN-SUFFIX,jstor.org
+  - DOMAIN-SUFFIX,nature.com
+  - DOMAIN-SUFFIX,sciencemag.org
+  - DOMAIN-SUFFIX,springer.com
+  - DOMAIN-SUFFIX,wiley.com
+  - DOMAIN-KEYWORD,sciencedirect
+  - DOMAIN-KEYWORD,cnki.net
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 其他 (推送、追蹤與常用域名)
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN,app.adjust.com
+  - DOMAIN,app.appsflyer.com
+  - DOMAIN-SUFFIX,jiasule.com
+  - DOMAIN-SUFFIX,koodomobile.com
+  - DOMAIN-SUFFIX,ol.epicgames.com
+  - DOMAIN-KEYWORD,wb_ad
+  - DOMAIN,ad.10010.com
+  - DOMAIN,analytics.95516.com
+  - DOMAIN,analytics.strava.com
+  - DOMAIN,bdtj.tagtic.cn
+  - DOMAIN,eco-push-api-client.meiqia.com
+  - DOMAIN,errlog.umeng.com
+  - DOMAIN,msg.umeng.com
+  - DOMAIN,msg.umengcloud.com
+  - DOMAIN,new-api.meiqia.com
+  - DOMAIN,origin-a.akamaihd.net
+  - DOMAIN,rewards.hypixel.net
+  - DOMAIN-SUFFIX,baomitu.com
+  - DOMAIN-SUFFIX,bootcss.com
+  - DOMAIN-SUFFIX,dizhensubao.getui.com
+  - DOMAIN-SUFFIX,f.video.weibocdn.com
+  - DOMAIN-SUFFIX,fus.cdn.krcom.cn
+  - DOMAIN-SUFFIX,googletraveladservices.com
+  - DOMAIN-SUFFIX,koodomobile.ca
+  - DOMAIN-SUFFIX,staticfile.org
+  - DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
+  - DOMAIN-SUFFIX,upaiyun.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 支付寶 Alipay
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,alipay.com
+  - DOMAIN-SUFFIX,alipayobjects.com
+  - DOMAIN-SUFFIX,alipaydun.com
+  - DOMAIN-SUFFIX,mybank.cn
+  - DOMAIN-SUFFIX,alipay.hk
+  - DOMAIN-SUFFIX,alipayplus.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 微信 WeChat / 騰訊支付
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,wechat.com
+  - DOMAIN-SUFFIX,weixinbridge.com
+  - DOMAIN-SUFFIX,weixin.qq.com
+  - DOMAIN-SUFFIX,wx.qq.com
+  - DOMAIN-SUFFIX,wx2.qq.com
+  - DOMAIN-SUFFIX,wx3.qq.com
+  - DOMAIN-SUFFIX,wx8.qq.com
+  - DOMAIN-SUFFIX,qpic.cn
+  - DOMAIN-SUFFIX,qlogo.cn
+  - DOMAIN-SUFFIX,mmstat.com
+  - DOMAIN-SUFFIX,wechatpay.com
+  - DOMAIN-SUFFIX,tenpay.com
+  - DOMAIN-SUFFIX,mmpay.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 淘寶 / 天貓
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,taobao.com
+  - DOMAIN-SUFFIX,tmall.com
+  - DOMAIN-SUFFIX,alicdn.com
+  - DOMAIN-SUFFIX,tbcdn.cn
+  - DOMAIN-SUFFIX,taobaocdn.com
+  - DOMAIN-SUFFIX,etao.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 京東 JD.com
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,jd.com
+  - DOMAIN-SUFFIX,jdcdn.com
+  - DOMAIN-SUFFIX,jdpay.com
+  - DOMAIN-SUFFIX,jd.hk
+  - DOMAIN-SUFFIX,jdimg.com
+  - DOMAIN-SUFFIX,360buy.com
+  - DOMAIN-SUFFIX,360buyimg.com
+  - DOMAIN-SUFFIX,jdcloud.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 拼多多 Pinduoduo
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,pinduoduo.com
+  - DOMAIN-SUFFIX,yangkeduo.com
+  - DOMAIN-SUFFIX,pddugc.com
+  - DOMAIN-SUFFIX,pdd.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 12306 中國鐵路
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,12306.cn
+  - DOMAIN-SUFFIX,rails.com.cn
+  - DOMAIN-SUFFIX,95306.cn
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 四大國有銀行
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,icbc.com.cn
+  - DOMAIN-SUFFIX,ccb.com
+  - DOMAIN-SUFFIX,abchina.com
+  - DOMAIN-SUFFIX,boc.cn
+  - DOMAIN-SUFFIX,bankcomm.com
+  - DOMAIN-SUFFIX,psbc.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 股份制商業銀行
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,cmbchina.com
+  - DOMAIN-SUFFIX,cib.com.cn
+  - DOMAIN-SUFFIX,spdb.com.cn
+  - DOMAIN-SUFFIX,cgbchina.com.cn
+  - DOMAIN-SUFFIX,pingan.com
+  - DOMAIN-SUFFIX,hxb.com.cn
+  - DOMAIN-SUFFIX,cmbc.com.cn
+  - DOMAIN-SUFFIX,citicbank.com.cn
+  - DOMAIN-SUFFIX,bankofbeijing.com.cn
+  - DOMAIN-SUFFIX,shrcb.com
+  - DOMAIN-SUFFIX,nbcb.com.cn
+  - DOMAIN-SUFFIX,gdb.com.cn
+  - DOMAIN-SUFFIX,hcb.com.cn
+  - DOMAIN-SUFFIX,hsbank.com.cn
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 券商 / 投資
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,eastmoney.com
+  - DOMAIN-SUFFIX,em.com.cn
+  - DOMAIN-SUFFIX,htsec.com
+  - DOMAIN-SUFFIX,gtja.com
+  - DOMAIN-SUFFIX,csc108.com
+  - DOMAIN-SUFFIX,ebscn.com
+  - DOMAIN-SUFFIX,gjzq.com.cn
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 政務 / 社保 / 公積金
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,gov.cn
+  - DOMAIN-SUFFIX,php2.opentimeclock.com
+  - DOMAIN-SUFFIX,18u8qxgf9h.execute-api.us-east-1.amazonaws.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 美團 / 大眾點評
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,meituan.com
+  - DOMAIN-SUFFIX,meituan.net
+  - DOMAIN-SUFFIX,dianping.com
+  - DOMAIN-SUFFIX,meituancdn.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 滴滴出行
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,didi.com
+  - DOMAIN-SUFFIX,didichuxing.com
+  - DOMAIN-SUFFIX,didiglobal.com
+  - DOMAIN-SUFFIX,xiaojukeji.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 攜程 / 飛豬 / 去哪兒
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,ctrip.com
+  - DOMAIN-SUFFIX,trip.com
+  - DOMAIN-SUFFIX,fliggy.com
+  - DOMAIN-SUFFIX,elong.com
+  - DOMAIN-SUFFIX,qunar.com
+  - DOMAIN-SUFFIX,ly.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 高德地圖 / 百度地圖
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,amap.com
+  - DOMAIN-SUFFIX,gaode.com
+  - DOMAIN-SUFFIX,map.baidu.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 順豐 / 菜鳥 / 快遞
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,sf-express.com
+  - DOMAIN-SUFFIX,sfexpress.com
+  - DOMAIN-SUFFIX,cainiao.com
+  - DOMAIN-SUFFIX,guoguo.cn
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Alibaba / Aliyun IP 段
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,42.120.0.0/14,no-resolve
+  - IP-CIDR,47.246.0.0/16,no-resolve
+  - IP-CIDR,59.80.0.0/14,no-resolve
+  - IP-CIDR,101.37.0.0/16,no-resolve
+  - IP-CIDR,106.11.0.0/16,no-resolve
+  - IP-CIDR,112.124.0.0/14,no-resolve
+  - IP-CIDR,116.62.0.0/16,no-resolve
+  - IP-CIDR,118.31.0.0/16,no-resolve
+  - IP-CIDR,120.25.0.0/16,no-resolve
+  - IP-CIDR,120.55.0.0/16,no-resolve
+  - IP-CIDR,121.196.0.0/14,no-resolve
+  - IP-CIDR,140.205.0.0/16,no-resolve
+  - IP-CIDR,163.181.0.0/16,no-resolve
+  - IP-CIDR,182.92.0.0/16,no-resolve
+  - IP-CIDR,203.107.0.0/16,no-resolve
+  - IP-CIDR,47.52.0.0/16,no-resolve
+  - IP-CIDR,47.88.0.0/14,no-resolve
+  - IP-CIDR,149.129.0.0/16,no-resolve
+  - IP-CIDR,161.117.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Tencent / 微信 IP 段
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,101.32.0.0/12,no-resolve
+  - IP-CIDR,109.244.0.0/16,no-resolve
+  - IP-CIDR,111.161.0.0/16,no-resolve
+  - IP-CIDR,112.90.0.0/15,no-resolve
+  - IP-CIDR,113.96.0.0/14,no-resolve
+  - IP-CIDR,119.147.0.0/16,no-resolve
+  - IP-CIDR,120.232.0.0/14,no-resolve
+  - IP-CIDR,121.51.0.0/16,no-resolve
+  - IP-CIDR,123.126.0.0/16,no-resolve
+  - IP-CIDR,175.27.0.0/16,no-resolve
+  - IP-CIDR,182.254.0.0/16,no-resolve
+  - IP-CIDR,203.205.0.0/16,no-resolve
+  - IP-CIDR,58.247.0.0/16,no-resolve
+  - IP-CIDR,58.250.0.0/16,no-resolve
+  - IP-CIDR,59.37.0.0/16,no-resolve
+  - IP-CIDR,61.151.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Baidu / 百度地圖 IP 段
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,103.235.46.0/23,no-resolve
+  - IP-CIDR,111.202.0.0/16,no-resolve
+  - IP-CIDR,119.75.0.0/16,no-resolve
+  - IP-CIDR,123.125.0.0/16,no-resolve
+  - IP-CIDR,180.76.0.0/16,no-resolve
+  - IP-CIDR,182.61.0.0/16,no-resolve
+  - IP-CIDR,220.181.0.0/16,no-resolve
+  - IP-CIDR,36.152.0.0/14,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # JD.com / 京東 IP 段
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,101.124.0.0/16,no-resolve
+  - IP-CIDR,106.39.0.0/16,no-resolve
+  - IP-CIDR,111.206.0.0/16,no-resolve
+  - IP-CIDR,122.112.0.0/14,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Meituan / 美團 IP 段
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,103.37.0.0/16,no-resolve
+  - IP-CIDR,123.58.0.0/16,no-resolve
+  - IP-CIDR,124.74.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # China Unicom / Telecom / Mobile CDN 回源
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - IP-CIDR,1.176.0.0/13,no-resolve
+  - IP-CIDR,14.17.0.0/16,no-resolve
+  - IP-CIDR,36.96.0.0/11,no-resolve
+  - IP-CIDR,58.16.0.0/14,no-resolve
+  - IP-CIDR,58.60.0.0/14,no-resolve
+  - IP-CIDR,61.24.0.0/13,no-resolve
+  - IP-CIDR,111.0.0.0/10,no-resolve
+  - IP-CIDR,117.128.0.0/10,no-resolve
+  - IP-CIDR,120.192.0.0/10,no-resolve
+  - IP-CIDR,125.64.0.0/11,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # Bilibili CDN 視頻流 (HK有節點，直連快)
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,bilivideo.com
+  - DOMAIN-SUFFIX,bilivideo.cn
+  - DOMAIN-SUFFIX,hdslb.com
+  - DOMAIN-SUFFIX,acgvideo.com
+  - DOMAIN-SUFFIX,biliimg.com
+  - IP-CIDR,119.3.0.0/16,no-resolve
+  - IP-CIDR,120.92.0.0/15,no-resolve
+  - IP-CIDR,61.148.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 網易雲音樂 CDN音樂串流
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,music.126.net
+  - IP-CIDR,101.71.0.0/16,no-resolve
+  - IP-CIDR,112.13.0.0/16,no-resolve
+  - IP-CIDR,115.236.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # QQ音樂/視頻 CDN媒體串流
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,vm.gtimg.cn
+  - DOMAIN-SUFFIX,vfiles.gtimg.cn
+  - DOMAIN-SUFFIX,imgcache.qq.com
+  - DOMAIN-SUFFIX,dl.stream.qqmusic.qq.com
+  - DOMAIN-SUFFIX,multimedia.nt.qq.com.cn
+  - DOMAIN-SUFFIX,qpic.com
+  - DOMAIN,fairplay.l.qq.com
+  - DOMAIN,livew.l.qq.com
+  - DOMAIN,vd.l.qq.com
+  - DOMAIN,vi.l.qq.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 喜馬拉雅 CDN音頻
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,xmcdn.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 小米 MIUI OTA / 靜態資源
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,mi.com
+  - DOMAIN-SUFFIX,miui.com
+  - DOMAIN-SUFFIX,xiaomi.com
+  - DOMAIN-SUFFIX,xiaomipush.com
+  - DOMAIN-SUFFIX,mi-img.com
+  - DOMAIN-SUFFIX,mifile.cn
+  - IP-CIDR,58.83.0.0/16,no-resolve
+  - IP-CIDR,117.144.0.0/14,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 愛奇藝 CDN視頻流
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,pps.tv
+  - DOMAIN-SUFFIX,iqiyi.cn
+  - IP-CIDR,125.88.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 酷狗 CDN音頻串流
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,kugoucdn.com
+  - IP-CIDR,183.57.0.0/16,no-resolve
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 新增：更多大陸常見 App 直連
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,ixigua.com
+  - DOMAIN-SUFFIX,toutiao.com
+  - DOMAIN-SUFFIX,bytedance.com
+  - DOMAIN-SUFFIX,feishu.cn
+  - DOMAIN-SUFFIX,larkoffice.com
+  - DOMAIN-SUFFIX,mihoyo.com
+  - DOMAIN-SUFFIX,hoyoverse.com
+  - DOMAIN-SUFFIX,genshinimpact.com
+  - DOMAIN-SUFFIX,starrail.com
+  - DOMAIN-SUFFIX,zenlesszonezero.com
+  - DOMAIN-SUFFIX,gamecenter.qq.com
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 新增：uhdnow
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN,www.uhdnow.com
+  - DOMAIN,smart.uhdnow.com
+  - DOMAIN,speed.uhdnow.com
+  - DOMAIN-SUFFIX,uhdnow.online
+
+  # === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
+  - PROCESS-NAME,thunder
+  - PROCESS-NAME,xunlei
+  - DOMAIN-KEYWORD,torrent
+  - DOMAIN-KEYWORD,announce
+  - DOMAIN-KEYWORD,tracker
+  - DOMAIN-KEYWORD,xunlei
+  - DOMAIN-KEYWORD,sandai
+  - DOMAIN-KEYWORD,thunder
+  - DOMAIN-SUFFIX,gov.hk
+  - DOMAIN-SUFFIX,12377.cn
+  - DOMAIN-SUFFIX,12315.com
+  - DOMAIN-SUFFIX,110.qq.com
+  - DOMAIN-SUFFIX,12321.cn
+  - DOMAIN-SUFFIX,cyberpolice.cn
+  - DOMAIN-SUFFIX,efcc.org
+  - DOMAIN-SUFFIX,zhuichaguoji.org
+  - DOMAIN-SUFFIX,tuidang.org

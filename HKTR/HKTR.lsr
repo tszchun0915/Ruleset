@@ -1,0 +1,18 @@
+# NAME: HKTR
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 港服跑跑卡丁車/Tales Runner（台灣[新台北] IP）
+# 建議策略: 👟 HKTR
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 7
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) HKTR.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) HKTR.list
+
+# # 港跑 (全部都屬於台灣[新台北]IP)
+DOMAIN-SUFFIX,talesrunner.com.hk
+DOMAIN-SUFFIX,funtown.com.hk
+DOMAIN-SUFFIX,runonline.hk
+IP-CIDR,18.178.95.0/24,no-resolve
+IP-CIDR,198.18.0.0/24,no-resolve
+IP-CIDR,210.242.202.0/24,no-resolve
+PROCESS-NAME,xldr_TalesRunner_HK_loader_x64.exe

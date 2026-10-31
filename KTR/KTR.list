@@ -1,0 +1,44 @@
+# NAME: KTR
+# FORMAT: Shadowrocket RULE-SET (.list)
+# DESC: Tales Runner 韓服
+# 建議策略: 🇰🇷 Korea
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 23
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) KTR.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) KTR.list
+
+# # === Tales Runner 韓服 (테일즈런너) 優化規則 - 2026年4月版 ===
+# # 專注 Rhaon + Onstove，減少誤觸
+# # === 核心遊戲伺服器（最重要，優先放最前） ===
+DOMAIN-SUFFIX,onstove.com
+DOMAIN-SUFFIX,rhaon.co.kr
+
+# # === 官方網站 & Launcher ===
+DOMAIN-SUFFIX,hangame.com
+
+# # === 帳號登入、會員、支付 ===
+DOMAIN-SUFFIX,payco.com
+DOMAIN-SUFFIX,naver.com
+DOMAIN-SUFFIX,daum.net
+
+# # === 其他韓國遊戲平台相關（保留但範圍較窄） ===
+DOMAIN-SUFFIX,nexon.com
+DOMAIN-SUFFIX,netmarble.com
+DOMAIN-SUFFIX,netmarble.net
+DOMAIN-SUFFIX,pmang.com
+DOMAIN-SUFFIX,mgame.com
+DOMAIN-SUFFIX,plaync.com
+DOMAIN-SUFFIX,krafton.com
+DOMAIN-SUFFIX,bugs.co.kr
+DOMAIN-SUFFIX,inven.co.kr
+DOMAIN-SUFFIX,pokipoki.kr
+DOMAIN-SUFFIX,pokipoki.co.kr
+
+# # === PROCESS-NAME（建議加入，Launcher 同遊戲本體走代理） ===
+PROCESS-NAME,TRGame.exe
+PROCESS-NAME,TalesRunner.exe
+PROCESS-NAME,TRLauncher.exe
+PROCESS-NAME,OnstoveLauncher.exe
+PROCESS-NAME,RhaonLauncher.exe
+PROCESS-NAME,HangameLauncher.exe

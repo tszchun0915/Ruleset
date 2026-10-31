@@ -1,0 +1,65 @@
+# NAME: Github
+# FORMAT: Shadowrocket RULE-SET (.list)
+# DESC: 只包含 GitHub「下載」相關網域（Release、源碼 zip、raw、LFS、容器、Actions artifacts）；github.com 網頁/API 唔包括，行 Final/直連
+# 建議策略: 🇯🇵 Japan（沿用你原本設定）
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 39
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Github.yaml
+#   - github.com/v2fly/domain-list-community data/github (commit 2026-10-30)
+#   - 實測 2026-10-31: github.com/.../releases/download/* 302 → release-assets.githubusercontent.com；archive/*.zip → codeload.github.com；/raw/ → raw.githubusercontent.com
+# CHANGELOG:
+#   - 新增 release-assets.githubusercontent.com —— 而家 GitHub Release 實際下載網域（你原本冇，所以 Release 下載仍然好慢）
+#   - 修正原檔「DOMAIN-SUFFIX, objects…」逗號後多咗空格，部分客戶端會當無效規則
+
+# === Release 下載（2025 年起改用 release-assets，舊版用 objects） ===
+DOMAIN-SUFFIX,release-assets.githubusercontent.com
+DOMAIN-SUFFIX,objects.githubusercontent.com
+DOMAIN-SUFFIX,objects-origin.githubusercontent.com
+DOMAIN-SUFFIX,github-releases.githubusercontent.com
+DOMAIN,github-production-release-asset-2e65be.s3.amazonaws.com
+
+# === 源碼 zip/tar、raw 檔案、Gist raw ===
+DOMAIN-SUFFIX,codeload.github.com
+DOMAIN-SUFFIX,raw.githubusercontent.com
+DOMAIN-SUFFIX,gist.githubusercontent.com
+
+# === Git LFS / 附件 / 雲端儲存 ===
+DOMAIN-SUFFIX,media.githubusercontent.com
+DOMAIN-SUFFIX,github-cloud.githubusercontent.com
+DOMAIN,github-cloud.s3.amazonaws.com
+DOMAIN,github-production-repository-file-5c1aeb.s3.amazonaws.com
+DOMAIN,github-production-user-asset-6210df.s3.amazonaws.com
+
+# === GitHub Packages / ghcr.io 容器 ===
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,pkg-containers.githubusercontent.com
+
+# === GitHub Actions artifacts / logs 下載 ===
+DOMAIN,productionresultssa0.blob.core.windows.net
+DOMAIN,productionresultssa1.blob.core.windows.net
+DOMAIN,productionresultssa2.blob.core.windows.net
+DOMAIN,productionresultssa3.blob.core.windows.net
+DOMAIN,productionresultssa4.blob.core.windows.net
+DOMAIN,productionresultssa5.blob.core.windows.net
+DOMAIN,productionresultssa6.blob.core.windows.net
+DOMAIN,productionresultssa7.blob.core.windows.net
+DOMAIN,productionresultssa8.blob.core.windows.net
+DOMAIN,productionresultssa9.blob.core.windows.net
+DOMAIN,productionresultssa10.blob.core.windows.net
+DOMAIN,productionresultssa11.blob.core.windows.net
+DOMAIN,productionresultssa12.blob.core.windows.net
+DOMAIN,productionresultssa13.blob.core.windows.net
+DOMAIN,productionresultssa14.blob.core.windows.net
+DOMAIN,productionresultssa15.blob.core.windows.net
+DOMAIN,productionresultssa16.blob.core.windows.net
+DOMAIN,productionresultssa17.blob.core.windows.net
+DOMAIN,productionresultssa18.blob.core.windows.net
+DOMAIN,productionresultssa19.blob.core.windows.net
+
+# === 電腦版：git clone/pull 走 VPN（只 Clash/Loon macOS 有效，iOS 會忽略） ===
+# git clone 經 github.com，冇辦法單靠網域分開，所以用進程名
+PROCESS-NAME,git-remote-https
+PROCESS-NAME,git-remote-https.exe
+PROCESS-NAME,git
+PROCESS-NAME,git.exe

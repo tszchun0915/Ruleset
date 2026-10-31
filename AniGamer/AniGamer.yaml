@@ -1,0 +1,31 @@
+# NAME: AniGamer
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 巴哈姆特動畫瘋（台灣限定）
+# 建議策略: 📺 AniGamer（台灣節點）
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 8
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) AniGamer.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) AniGamer.list
+#   - github.com/blackmatrix7/ios_rule_script rule/Loon/Bahamut/Bahamut.list (repo commit 2026-10-27)
+#   - github.com/v2fly/domain-list-community data/bahamut (commit 2026-10-30)
+# CHANGELOG:
+#   - 合併 blackmatrix7 Bahamut + v2fly bahamut；原本 gamer.com.tw 子域名已被 DOMAIN-SUFFIX,gamer.com.tw 覆蓋，所以去重
+#   - 修正 IP 規則後面嘅行內註解（Shadowrocket/Loon 會當無效）
+payload:
+
+  - DOMAIN-SUFFIX,bahamut.com.tw
+  - IP-CIDR,104.16.181.30/32,no-resolve  # AniGamer 具體IP
+  - IP-CIDR,104.16.182.30/32,no-resolve  # AniGamer 具體IP
+
+  # === 上游合併：blackmatrix7 Bahamut ===
+  - DOMAIN-SUFFIX,gamer.com.tw
+  - DOMAIN-SUFFIX,hinet.net
+  - DOMAIN-SUFFIX,viblast.com
+
+  # === 上游合併：v2fly bahamut ===
+  - DOMAIN-SUFFIX,bahamut.akamaized.net
+
+  # === 已停用（範圍太闊/會誤傷），如真係需要請自行取消註解 ===
+  # - DOMAIN-SUFFIX,gvt1.com    ← bm7 上游有，但係 Google/Chrome 更新共用 CDN，走台灣會拖慢更新
+  # - DOMAIN-SUFFIX,digicert.com    ← bm7 上游有，但係全網共用證書 OCSP

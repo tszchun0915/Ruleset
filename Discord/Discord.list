@@ -1,0 +1,98 @@
+# NAME: Discord
+# FORMAT: Shadowrocket RULE-SET (.list)
+# DESC: Discord
+# 建議策略: 🚀 Default
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 65
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Discord.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Discord.list
+#   - github.com/blackmatrix7/ios_rule_script rule/Loon/Discord/Discord.list (repo commit 2026-10-27)
+#   - github.com/v2fly/domain-list-community data/discord (commit 2026-10-30)
+
+# # Discord 主要域名
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discordapp.io
+
+# # Discord 短網址和功能域名
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,dis.gd
+DOMAIN-SUFFIX,discord.new
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discord.gift
+DOMAIN-SUFFIX,discord.gifts
+
+# # Discord 開發者和工具域名
+DOMAIN-SUFFIX,discord.dev
+DOMAIN-SUFFIX,discord.tools
+DOMAIN-SUFFIX,discord.design
+DOMAIN-SUFFIX,discord-activities.com
+DOMAIN-SUFFIX,discordactivities.com
+DOMAIN-SUFFIX,discordsays.com
+
+# # Discord 商店和狀態頁面
+DOMAIN-SUFFIX,discord.store
+DOMAIN-SUFFIX,discordmerch.com
+DOMAIN-SUFFIX,discordpartygames.com
+DOMAIN-SUFFIX,discordstatus.com
+DOMAIN-SUFFIX,discord.co
+
+# # Discord CDN 相關
+DOMAIN-SUFFIX,discordcdn.com
+DOMAIN-SUFFIX,discordsez.com
+
+# # 愚人節特殊域名
+DOMAIN-SUFFIX,airhorn.solutions
+
+# # Discord 主要 IP 範圍 (66.22.x.x 段)
+IP-CIDR,66.22.192.0/18,no-resolve
+
+# # Discord 區域性 IP 範圍
+IP-CIDR,66.22.196.0/22,no-resolve
+IP-CIDR,66.22.200.0/22,no-resolve
+IP-CIDR,66.22.204.0/22,no-resolve
+IP-CIDR,66.22.208.0/22,no-resolve
+IP-CIDR,66.22.212.0/22,no-resolve
+IP-CIDR,66.22.216.0/23,no-resolve
+IP-CIDR,66.22.218.0/23,no-resolve
+IP-CIDR,66.22.220.0/23,no-resolve
+IP-CIDR,66.22.222.0/23,no-resolve
+IP-CIDR,66.22.224.0/23,no-resolve
+IP-CIDR,66.22.226.0/23,no-resolve
+IP-CIDR,66.22.228.0/23,no-resolve
+
+# # Discord 小型區域網絡 (/24 段)
+IP-CIDR,66.22.230.0/24,no-resolve
+IP-CIDR,66.22.231.0/24,no-resolve
+IP-CIDR,66.22.232.0/24,no-resolve
+IP-CIDR,66.22.233.0/24,no-resolve
+IP-CIDR,66.22.234.0/24,no-resolve
+IP-CIDR,66.22.235.0/24,no-resolve
+IP-CIDR,66.22.236.0/24,no-resolve
+IP-CIDR,66.22.237.0/24,no-resolve
+IP-CIDR,66.22.238.0/24,no-resolve
+IP-CIDR,66.22.239.0/24,no-resolve
+IP-CIDR,66.22.240.0/24,no-resolve
+IP-CIDR,66.22.241.0/24,no-resolve
+IP-CIDR,66.22.242.0/24,no-resolve
+IP-CIDR,66.22.243.0/24,no-resolve
+IP-CIDR,66.22.244.0/24,no-resolve
+IP-CIDR,66.22.245.0/24,no-resolve
+IP-CIDR,66.22.246.0/24,no-resolve
+IP-CIDR,66.22.247.0/24,no-resolve
+IP-CIDR,66.22.248.0/24,no-resolve
+
+# # Discord 其他 IP 範圍
+IP-CIDR,195.62.89.0/24,no-resolve
+IP-CIDR,12.129.184.160/29,no-resolve
+IP-CIDR,64.71.8.96/29,no-resolve
+
+# === 上游合併：blackmatrix7 Discord ===
+DOMAIN-SUFFIX,airhornbot.com
+DOMAIN-SUFFIX,bigbeans.solutions
+DOMAIN-SUFFIX,discord-attachments-uploads-prd.storage.googleapis.com
+DOMAIN-SUFFIX,discordapp.page.link
+DOMAIN-SUFFIX,hammerandchisel.ssl.zendesk.com
+DOMAIN-SUFFIX,watchanimeattheoffice.com

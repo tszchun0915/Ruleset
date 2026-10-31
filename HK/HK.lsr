@@ -1,0 +1,31 @@
+# NAME: HK
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 必須香港節點（HKJC、香港 IPTV 等）
+# 建議策略: 🇭🇰 HongKong
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 18
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) HK.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) HK.list
+
+# # 必須香港節點
+DOMAIN-SUFFIX,hoy.tv
+DOMAIN-SUFFIX,jdshipin.com
+DOMAIN-SUFFIX,163189.xyz
+DOMAIN-KEYWORD,rthktv
+DOMAIN-KEYWORD,hoytv
+DOMAIN-KEYWORD,hkjc
+DOMAIN-SUFFIX,smart.pendy.dpdns.org
+DOMAIN-SUFFIX,sport.pendy.dpdns.org
+DOMAIN-SUFFIX,breezy-audrie-zspace-7524863c.koyeb.app
+DOMAIN-SUFFIX,vrvwfasiyxst.ap-southeast-1.clawcloudrun.com
+DOMAIN-SUFFIX,youtube.livednow.dpdns.org
+DOMAIN-SUFFIX,docker.livednow.dpdns.org
+DOMAIN-SUFFIX,live.tvls.org
+DOMAIN-SUFFIX,jxiptv.dpdns.org
+DOMAIN-SUFFIX,ntdofifreepc-tgc.cdn.hinet.net
+DOMAIN-SUFFIX,cdi.ofiii.com
+
+# === 由 Clash 版本合併（兩邊原本唔一致，已合併） ===
+DOMAIN-SUFFIX,live.tvfix.org
+DOMAIN-SUFFIX,ofissaifreepc.akamaized.net

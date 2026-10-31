@@ -1,0 +1,47 @@
+# NAME: Discord_Plus
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: Discord 補充：只放 blackmatrix7 Discord 冇嘅規則（主要係語音伺服器 IP 段），要同 bm7 Discord 一齊用
+# 建議策略: 同 Discord 一樣
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 36
+# SOURCES:
+#   - github.com/tszchun0915/Ruleset Discord（減去 blackmatrix7 rule/*/Discord 已有嘅規則）
+payload:
+
+  # === 補充 ===
+  - DOMAIN-SUFFIX,discordsez.com
+  - IP-CIDR,66.22.192.0/18,no-resolve
+  - IP-CIDR,66.22.196.0/22,no-resolve
+  - IP-CIDR,66.22.200.0/22,no-resolve
+  - IP-CIDR,66.22.204.0/22,no-resolve
+  - IP-CIDR,66.22.208.0/22,no-resolve
+  - IP-CIDR,66.22.212.0/22,no-resolve
+  - IP-CIDR,66.22.216.0/23,no-resolve
+  - IP-CIDR,66.22.218.0/23,no-resolve
+  - IP-CIDR,66.22.220.0/23,no-resolve
+  - IP-CIDR,66.22.222.0/23,no-resolve
+  - IP-CIDR,66.22.224.0/23,no-resolve
+  - IP-CIDR,66.22.226.0/23,no-resolve
+  - IP-CIDR,66.22.228.0/23,no-resolve
+  - IP-CIDR,66.22.230.0/24,no-resolve
+  - IP-CIDR,66.22.231.0/24,no-resolve
+  - IP-CIDR,66.22.232.0/24,no-resolve
+  - IP-CIDR,66.22.233.0/24,no-resolve
+  - IP-CIDR,66.22.234.0/24,no-resolve
+  - IP-CIDR,66.22.235.0/24,no-resolve
+  - IP-CIDR,66.22.236.0/24,no-resolve
+  - IP-CIDR,66.22.237.0/24,no-resolve
+  - IP-CIDR,66.22.238.0/24,no-resolve
+  - IP-CIDR,66.22.239.0/24,no-resolve
+  - IP-CIDR,66.22.240.0/24,no-resolve
+  - IP-CIDR,66.22.241.0/24,no-resolve
+  - IP-CIDR,66.22.242.0/24,no-resolve
+  - IP-CIDR,66.22.243.0/24,no-resolve
+  - IP-CIDR,66.22.244.0/24,no-resolve
+  - IP-CIDR,66.22.245.0/24,no-resolve
+  - IP-CIDR,66.22.246.0/24,no-resolve
+  - IP-CIDR,66.22.247.0/24,no-resolve
+  - IP-CIDR,66.22.248.0/24,no-resolve
+  - IP-CIDR,195.62.89.0/24,no-resolve
+  - IP-CIDR,12.129.184.160/29,no-resolve
+  - IP-CIDR,64.71.8.96/29,no-resolve

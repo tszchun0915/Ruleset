@@ -3,7 +3,8 @@
 # DESC: 台灣 IPTV / 4GTV 等
 # 建議策略: 🇹🇼 Taiwan
 # UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 7
+# TOTAL: 9
+# PROPOSED: 由 HK 搬入台灣 IPTV（ofissaifreepc 本身已有）
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) TW.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) TW.list
@@ -15,3 +16,6 @@ DOMAIN-SUFFIX,4gtvfree-mozai.4gtv.tv
 DOMAIN-SUFFIX,4gtvfreepc-cds.cdn.hinet.net
 DOMAIN-SUFFIX,ntd-tgc.cdn.hinet.net
 DOMAIN-SUFFIX,api2.4gtv.tv
+
+DOMAIN-SUFFIX,ntdofifreepc-tgc.cdn.hinet.net
+DOMAIN-SUFFIX,cdi.ofiii.com

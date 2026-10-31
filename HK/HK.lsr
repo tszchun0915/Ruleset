@@ -3,7 +3,8 @@
 # DESC: 必須香港節點（HKJC、香港 IPTV 等）
 # 建議策略: 🇭🇰 HongKong
 # UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 18
+# TOTAL: 15
+# PROPOSED: 搬走 3 條台灣 IPTV（ofiii / hinet）去 TW
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) HK.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) HK.list
@@ -23,9 +24,9 @@ DOMAIN-SUFFIX,youtube.livednow.dpdns.org
 DOMAIN-SUFFIX,docker.livednow.dpdns.org
 DOMAIN-SUFFIX,live.tvls.org
 DOMAIN-SUFFIX,jxiptv.dpdns.org
-DOMAIN-SUFFIX,ntdofifreepc-tgc.cdn.hinet.net
-DOMAIN-SUFFIX,cdi.ofiii.com
+# [建議刪除] DOMAIN-SUFFIX,ntdofifreepc-tgc.cdn.hinet.net
+# [建議刪除] DOMAIN-SUFFIX,cdi.ofiii.com
 
 # === 由 Clash 版本合併（兩邊原本唔一致，已合併） ===
 DOMAIN-SUFFIX,live.tvfix.org
-DOMAIN-SUFFIX,ofissaifreepc.akamaized.net
+# [建議刪除] DOMAIN-SUFFIX,ofissaifreepc.akamaized.net

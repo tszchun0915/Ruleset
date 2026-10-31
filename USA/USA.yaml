@@ -3,7 +3,8 @@
 # DESC: 必須美國節點
 # 建議策略: 🇺🇸 USA
 # UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 26
+# TOTAL: 20
+# PROPOSED: 只刪重複：pendy 兩條（HK 已有，HK 喺前面永遠先中）、tvpass.org（最頂已 DIRECT）。漫畫/catbox/nhentai/Cloudflare IP 係你為速度放美國，保留。lens.l.google.com / delivery.mp.microsoft / 17.248.216.0/24 標 [待確認]
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) USA.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) USA.list
@@ -17,19 +18,19 @@ payload:
   - DOMAIN-SUFFIX,fnews.media
   - DOMAIN-SUFFIX,files.catbox.moe
   - DOMAIN-SUFFIX,onlythx.com
-  - DOMAIN-SUFFIX,delivery.mp.microsoft
+  - DOMAIN-SUFFIX,delivery.mp.microsoft   # [待確認] 唔鎖區；如果係為咗速度先放美國就保留，否則可刪（會跌去 🚀 Default）
   - DOMAIN-SUFFIX,iptv.mydiver.eu.org
-  - DOMAIN-SUFFIX,smart.pendy.dpdns.org
-  - DOMAIN-SUFFIX,sport.pendy.dpdns.org
+  # [建議刪除] DOMAIN-SUFFIX,smart.pendy.dpdns.org
+  # [建議刪除] DOMAIN-SUFFIX,sport.pendy.dpdns.org
   - DOMAIN-SUFFIX,docker.livenow.dpdns.org
   - DOMAIN-SUFFIX,4gtv.livenow.dpdns.org
   - DOMAIN-SUFFIX,iptv.mydriver.eu.org
-  - DOMAIN-SUFFIX,tvpass.org
+  # [建議刪除] DOMAIN-SUFFIX,tvpass.org
   - DOMAIN-SUFFIX,myreadingmanga.info
   - DOMAIN-SUFFIX,mangadex.org
   - DOMAIN-SUFFIX,wto.to
-  - DOMAIN-SUFFIX,lens.l.google.com
-  - IP-CIDR,17.248.216.0/24,no-resolve
+  - DOMAIN-SUFFIX,lens.l.google.com   # [待確認] 唔鎖區；如果係為咗速度先放美國就保留，否則可刪（會跌去 🚀 Default）
+  - IP-CIDR,17.248.216.0/24,no-resolve   # [待確認] 唔鎖區；如果係為咗速度先放美國就保留，否則可刪（會跌去 🚀 Default）
   - IP-CIDR,104.21.16.1/32,no-resolve
   - IP-CIDR,104.21.96.1/32,no-resolve
   - IP-CIDR,104.21.80.1/32,no-resolve

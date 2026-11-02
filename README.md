@@ -41,6 +41,15 @@
 | Pay-HK-Direct | 4 / 4 / 4 | DIRECT |
 | QR-Order-HKTW | 3 / 3 / 3 | DIRECT |
 
+## 2026-11-02 地區補窿
+三個新主題，佈局同其他一樣（`<主題>/<主題>.yaml`、`.list`、`.lsr`）。策略、用途同「只公開域名規則」見 `README-region-fill-20261102.md`。原有規則集冇刪。主配置同訂閱連結唔喺呢個 repo。
+
+| 主題 | 條數 (.yaml / .list / .lsr) | 建議策略 |
+|---|---|---|
+| CN-Local | 3 / 3 / 3 | 🇨🇳 China |
+| HKJC-Extra | 4 / 4 / 4 | 🇭🇰 HongKong |
+| LineTV-Extra | 7 / 7 / 7 | 🇹🇼 Taiwan |
+
 客戶端：`https://raw.githubusercontent.com/tszchun0915/Ruleset/refs/heads/main/<Name>/<Name>.{yaml|list|lsr}`
 
 .yaml 少過 .list：Clash/Mihomo 唔支援 USER-AGENT / URL-REGEX，所以自動略過。.lsr 已經將 DST-PORT 轉做 Loon 用嘅 DEST-PORT，UDP 用 PROTOCOL,UDP。

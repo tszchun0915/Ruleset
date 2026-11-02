@@ -1,0 +1,24 @@
+# LineTV-Extra
+
+LINE TV／ChocoTV（台灣）→ 🇹🇼 Taiwan；刻意唔包 line-cdn.net／line-scdn.net，免誤傷 LINE 通訊
+
+- **建議策略**: `🇹🇼 Taiwan`
+- **格式**: `LineTV-Extra.yaml` (Clash) / `LineTV-Extra.list` (Shadowrocket) / `LineTV-Extra.lsr` (Loon)
+
+## Domains
+
+```
+DOMAIN-SUFFIX,linetv.tw
+DOMAIN-SUFFIX,chocotv.com.tw
+DOMAIN,d17lx9ucc6k9fc.cloudfront.net
+DOMAIN,d3pgb93pk7bvxj.cloudfront.net
+DOMAIN,d3vm9lcxb6xcm4.cloudfront.net
+DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net
+PROCESS-NAME,com.linecorp.linetv
+```
+
+## Notes (zh-HK)
+
+呢個規則集只放域名／PROCESS-NAME，唔放訂閱或主配置。主配置同訂閱 Link 請留喺私人渠道。
+
+<!-- Maintained with Grok Bot -->

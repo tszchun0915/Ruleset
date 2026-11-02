@@ -1,0 +1,19 @@
+# NAME: LineTV-Extra
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: LINE TV／ChocoTV（台灣）→ 🇹🇼 Taiwan；刻意唔包 line-cdn.net／line-scdn.net，免誤傷 LINE 通訊
+# 建議策略: 🇹🇼 Taiwan
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 7
+# Maintained with Grok Bot / 由 Grok Bot 維護
+# SOURCES:
+#   - 用戶地區模型補窿（深圳通／koolcenter／馬會／LineTV）；bm7 LineTV 去掉會誤傷 LINE 嘅 CDN
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+
+DOMAIN-SUFFIX,linetv.tw
+DOMAIN-SUFFIX,chocotv.com.tw
+DOMAIN,d17lx9ucc6k9fc.cloudfront.net
+DOMAIN,d3pgb93pk7bvxj.cloudfront.net
+DOMAIN,d3vm9lcxb6xcm4.cloudfront.net
+DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net
+PROCESS-NAME,com.linecorp.linetv

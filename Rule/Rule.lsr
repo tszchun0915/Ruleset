@@ -1,0 +1,108 @@
+# NAME: Rule
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 應該普遍無法 Proxy，建議 Set 死 REJECT/DIRECT（BT、迅雷、法輪功相關、政府、百度定位、360）
+# 建議策略: REJECT 或 DIRECT
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 73
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Rule.yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Rule.list
+# CHANGELOG:
+#   - 合併 Clash(PROCESS-NAME) 同 Shadowrocket(USER-AGENT) 兩個版本；Clash 版會自動略過 USER-AGENT
+#   - 新增 DOMAIN-SUFFIX,gov.cn 取代 DOMAIN-KEYWORD,gov
+
+# # 應該普遍無法Proxy,可以Set死Reject/Direct.
+# # BT 相關
+PROCESS-NAME,qbittorrent
+PROCESS-NAME,transmission
+PROCESS-NAME,utorrent
+PROCESS-NAME,bittorrent
+DOMAIN-KEYWORD,torrent
+DOMAIN-KEYWORD,announce
+DOMAIN-KEYWORD,tracker
+
+# # 法輪功相關網站
+DOMAIN-SUFFIX,dafahao.com
+DOMAIN-SUFFIX,mingjinglive.com
+DOMAIN-SUFFIX,botanwang.com
+DOMAIN-SUFFIX,minghui.org
+DOMAIN-SUFFIX,dongtaiwang.com
+DOMAIN-SUFFIX,falunaz.net
+DOMAIN-SUFFIX,epochtimes.com
+DOMAIN-SUFFIX,ntdtv.com
+DOMAIN-SUFFIX,falundafa.org
+DOMAIN-SUFFIX,falungong.org
+DOMAIN-SUFFIX,wujieliulan.com
+DOMAIN-SUFFIX,zhengjian.org
+DOMAIN-SUFFIX,rfa.org
+DOMAIN-SUFFIX,voachinese.com
+DOMAIN-SUFFIX,soundofhope.org
+DOMAIN-SUFFIX,renminbao.com
+DOMAIN-SUFFIX,aboluowang.com
+DOMAIN-SUFFIX,bannedbook.org
+DOMAIN-SUFFIX,secretchina.com
+DOMAIN-SUFFIX,dajiyuan.com
+DOMAIN-SUFFIX,boxun.com
+DOMAIN-SUFFIX,chinadigitaltimes.net
+DOMAIN-SUFFIX,dwnews.com
+DOMAIN-SUFFIX,creaders.net
+DOMAIN-SUFFIX,oneplusnews.com
+DOMAIN-SUFFIX,epochweekly.com
+DOMAIN-SUFFIX,cn.rfi.fr
+
+# # 政府網站
+DOMAIN-SUFFIX,12377.cn
+DOMAIN-SUFFIX,12315.com
+DOMAIN-SUFFIX,110.qq.com
+DOMAIN-SUFFIX,12321.cn
+DOMAIN-SUFFIX,cyberpolice.cn
+DOMAIN-SUFFIX,efcc.org
+DOMAIN-SUFFIX,zhuichaguoji.org
+DOMAIN-SUFFIX,tuidang.org
+
+# # 百度定位
+DOMAIN-KEYWORD,api.map.baidu
+DOMAIN-KEYWORD,ps.map.baidu
+DOMAIN-KEYWORD,sv.map.baidu
+DOMAIN-KEYWORD,offnavi.map.baidu
+DOMAIN-KEYWORD,newvector.map.baidu
+DOMAIN-KEYWORD,ulog.imap.baidu
+DOMAIN-KEYWORD,newloc.map.baidu
+
+# # 360 相關
+DOMAIN-SUFFIX,360.cn
+DOMAIN-SUFFIX,360.com
+DOMAIN-SUFFIX,so.com
+DOMAIN-SUFFIX,qihoo.com
+DOMAIN-SUFFIX,qhimg.com
+
+# # 迅雷相關
+PROCESS-NAME,thunder
+PROCESS-NAME,xunlei
+DOMAIN-KEYWORD,xunlei
+DOMAIN-KEYWORD,sandai
+DOMAIN-KEYWORD,thunder
+
+# # 強制特定端口走代理
+DEST-PORT,22
+DEST-PORT,23
+DEST-PORT,25
+DEST-PORT,445
+DEST-PORT,465
+DEST-PORT,587
+DEST-PORT,992
+DEST-PORT,3389
+DEST-PORT,6881-6999
+
+# === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
+USER-AGENT,qbittorrent
+USER-AGENT,transmission
+USER-AGENT,utorrent
+USER-AGENT,bittorrent
+
+# === 政府網站（收窄版） ===
+DOMAIN-SUFFIX,gov.cn
+
+# === 已停用（範圍太闊/會誤傷），如真係需要請自行取消註解 ===
+# DOMAIN-KEYWORD,gov    ← 太闊：會中 gov.hk、gov.tw、gov.uk 等，Set REJECT 會令香港政府網站用唔到；已改為 DOMAIN-SUFFIX,gov.cn
+# DEST-PORT,10000-65535    ← 太闊：遊戲、Discord 語音、WebRTC、QUIC 都會中

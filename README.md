@@ -1,6 +1,6 @@
 # Ruleset
 
-域名規則集（Clash `.yaml`／小火箭 `.list`／Loon `.lcf`）。主配置同訂閱唔放呢度。
+域名規則集（Clash `.yaml`／小火箭 `.list`／Loon `.lsr`）。主配置同訂閱唔放呢度。完整 Loon 配置先用 `.lcf`。
 
 ## 思路
 
@@ -52,7 +52,7 @@
 | Line-Extra | LINE 補充 |
 | Emby-Extra | Emby 點播補充 |
 
-格式：`<主題>/<主題>.yaml` · `.list` · `.lcf`
+格式：`<主題>/<主題>.yaml` · `.list` · `.lsr`
 
 最後更新：2026-11-03（Asia/Hong_Kong）
 

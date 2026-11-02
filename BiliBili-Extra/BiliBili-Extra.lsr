@@ -1,0 +1,19 @@
+# NAME: BiliBili-Extra
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 嗶哩漫畫、貓耳 FM、快取關鍵字同網段補充；客戶端預期 DIRECT
+# 建議策略: DIRECT
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 7
+# SOURCES:
+#   - 由 Clash 配置內聯域名規則抽出
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+#   - 2026-11-02: 獨立主題，方便主配置 DIRECT；唔改現有 bilibili 集
+
+DOMAIN-KEYWORD,cn-hk-eq-bcache-
+DOMAIN-SUFFIX,bilicomic.com
+DOMAIN-SUFFIX,maoer.com
+DOMAIN-SUFFIX,missevan.com
+DOMAIN-SUFFIX,huasheng.cn
+DOMAIN-SUFFIX,updream.cn
+IP-CIDR,121.11.192.0/24,no-resolve

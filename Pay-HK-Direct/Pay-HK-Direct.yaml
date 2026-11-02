@@ -1,0 +1,15 @@
+# NAME: Pay-HK-Direct
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 香港 PayMe／FPS（hkicl）掃碼支付 → DIRECT（Bank(HK) 以外補強）
+# 建議策略: DIRECT
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 4
+# SOURCES:
+#   - 由 final 配置內聯 DOMAIN 鏈抽出（北上常用／掃碼點餐／HK 支付）
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+payload:
+  - DOMAIN-SUFFIX,payme.com.hk
+  - DOMAIN-SUFFIX,payme.hk
+  - DOMAIN-SUFFIX,hkicl.com.hk
+  - DOMAIN,payme.hsbc.com.hk

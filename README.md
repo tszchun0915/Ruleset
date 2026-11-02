@@ -25,6 +25,7 @@
 | Discord | Discord |
 | Emby | Emby／媒體 |
 | HK | 香港媒體等 |
+| Japan | 日本動畫、漫畫 |
 | HKJC-Extra | 馬會補充 |
 | HKTR / KTR | 港／韓跑相關 |
 | Line | LINE |
@@ -53,6 +54,6 @@
 
 格式：`<主題>/<主題>.yaml` · `.list` · `.lsr`
 
-最後更新：2026-11-02（Asia/Hong_Kong）
+最後更新：2026-11-03（Asia/Hong_Kong）
 
 <!-- Maintained with Grok Bot -->

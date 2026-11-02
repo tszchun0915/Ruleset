@@ -41,6 +41,14 @@
 | QR-Order-HKTW | 港台掃碼點餐 |
 | AlipayHK | AlipayHK |
 | Pay-HK-Direct | PayMe／FPS |
+| DNS-Leak-Test | DNS 洩漏檢測 |
+| MapleStory-Worlds | 楓之谷世界 |
+| Dcard | Dcard |
+| Bing-Extra | Bing 補充 |
+| BiliBili-Extra | B 站漫畫／貓耳補充 |
+| TikTok-Extra | TikTok CDN 補充 |
+| Line-Extra | LINE 補充 |
+| Emby-Extra | Emby 點播補充 |
 
 格式：`<主題>/<主題>.yaml` · `.list` · `.lsr`
 

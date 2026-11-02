@@ -1,0 +1,19 @@
+# NAME: MapleStory-Worlds
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 楓之谷世界（指定 Nexon 主機）；同 KTR 分開，避免成個 nexon.com 行韓節點
+# 建議策略: 🚀 Default
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 7
+# SOURCES:
+#   - 由 Clash 配置內聯域名規則抽出
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+#   - 2026-11-02: 獨立主題；主配置放 KTR 之前。只收指定主機，唔收 DOMAIN-SUFFIX,nexon.com
+payload:
+  - DOMAIN,maplestoryworlds.nexon.com
+  - DOMAIN,m-api.nexon.com
+  - DOMAIN,mod-gateway.nexon.com
+  - DOMAIN,mod-game-gateway.nexon.com
+  - DOMAIN,mod-resource.dn.nexoncdn.co.kr
+  - DOMAIN,mod-file.dn.nexoncdn.co.kr
+  - DOMAIN,mod-ugc.dn.nexoncdn.co.kr

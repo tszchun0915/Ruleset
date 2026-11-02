@@ -1,0 +1,14 @@
+# NAME: DianPing
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 大眾點評／貓眼（bm7 無獨立 DianPing）→ 🇨🇳 China
+# 建議策略: 🇨🇳 China
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 3
+# SOURCES:
+#   - 由 final 配置內聯 DOMAIN 鏈抽出（北上常用／掃碼點餐／HK 支付）
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+payload:
+  - DOMAIN-SUFFIX,dianping.com
+  - DOMAIN-SUFFIX,dpfile.com
+  - DOMAIN-SUFFIX,maoyan.com

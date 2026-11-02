@@ -1,0 +1,21 @@
+# NAME: QR-Order-CN
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 大陸掃碼點餐 SaaS（二維火／客如雲／嘩啦啦／微盟／銀豹／美味不用等／企邁；有贊用 bm7 YouZan）→ 🇨🇳 China
+# 建議策略: 🇨🇳 China
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 10
+# SOURCES:
+#   - 由 final 配置內聯 DOMAIN 鏈抽出（北上常用／掃碼點餐／HK 支付）
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+
+DOMAIN-SUFFIX,2dfire.com
+DOMAIN-SUFFIX,keruyun.com
+DOMAIN-SUFFIX,hualala.com
+DOMAIN-SUFFIX,weimob.com
+DOMAIN-SUFFIX,pospal.cn
+DOMAIN-SUFFIX,pospal.com
+DOMAIN-SUFFIX,mwee.cn
+DOMAIN-SUFFIX,qmai.com
+DOMAIN-SUFFIX,qmai.cn
+DOMAIN-SUFFIX,qmimg.cn

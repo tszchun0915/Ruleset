@@ -27,6 +27,22 @@
 | WishRunner | 8 / 8 / 8 | 0 |
 | bilibili | 130 / 134 / 134 | 0 |
 
+## 2026-11-02 新增
+八個新主題，佈局同其他一樣（`<主題>/<主題>.yaml`、`.list`、`.lsr`）。明細見 `README-new-sets-20261102.md`。原有規則集冇刪。
+
+| 主題 | 條數 (.yaml / .list / .lsr) | 建議策略 |
+|---|---|---|
+| DianPing | 3 / 3 / 3 | 🇨🇳 China |
+| Taobao-Extra | 3 / 3 / 3 | 🇨🇳 China |
+| QQ-Tencent-Lite | 9 / 9 / 9 | 🇨🇳 China |
+| DouYin-Extra | 7 / 7 / 7 | 🇨🇳 China |
+| QR-Order-CN | 10 / 10 / 10 | 🇨🇳 China |
+| AlipayHK | 2 / 2 / 2 | 🇨🇳 China |
+| Pay-HK-Direct | 4 / 4 / 4 | DIRECT |
+| QR-Order-HKTW | 3 / 3 / 3 | DIRECT |
+
+客戶端：`https://raw.githubusercontent.com/tszchun0915/Ruleset/refs/heads/main/<Name>/<Name>.{yaml|list|lsr}`
+
 .yaml 少過 .list：Clash/Mihomo 唔支援 USER-AGENT / URL-REGEX，所以自動略過。.lsr 已經將 DST-PORT 轉做 Loon 用嘅 DEST-PORT，UDP 用 PROTOCOL,UDP。
 
 ## 特別處理

@@ -1,0 +1,10 @@
+# HK/TW pay & QR order → DIRECT (CN meal/pay folded into CN)
+DOMAIN-SUFFIX,alipayhk.com
+DOMAIN-SUFFIX,alipay.hk
+DOMAIN-SUFFIX,payme.com.hk
+DOMAIN-SUFFIX,payme.hk
+DOMAIN-SUFFIX,hkicl.com.hk
+DOMAIN,payme.hsbc.com.hk
+DOMAIN-SUFFIX,openrice.com
+DOMAIN-SUFFIX,foodpanda.hk
+DOMAIN-SUFFIX,foodpanda.com.tw

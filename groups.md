@@ -2,7 +2,7 @@
 
 主題夾保持獨立，唔合併檔案。下面只係邊啲可以順住用同一策略，等主配置少幾行註解。策略喺主配置度定。
 
-`https://raw.githubusercontent.com/tszchun0915/Ruleset/main/<主題>/<主題>.yaml` · `.list` · `.lcf`
+`https://raw.githubusercontent.com/tszchun0915/Ruleset/main/<主題>/<主題>.yaml` · `.list` · `.lsr`
 
 ## 次序
 
@@ -49,4 +49,4 @@ rules:
   - RULE-SET,Taobao-Extra,🇨🇳 China
 ```
 
-Loon：`https://raw.githubusercontent.com/tszchun0915/Ruleset/main/CN/CN.lcf,policy=🇨🇳 China`
+Loon：`https://raw.githubusercontent.com/tszchun0915/Ruleset/main/CN/CN.lsr,policy=🇨🇳 China`

@@ -1,0 +1,281 @@
+# NAME: Bank(HK)
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: 香港銀行、支付、證券、加密貨幣、保險
+# 建議策略: 🔒 Safe（直連/回家）
+# UPDATED: 2026-10-31 (Asia/Taipei)
+# TOTAL: 196
+# SOURCES:
+#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Bank(HK).yaml
+#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Bank(HK).list
+# CHANGELOG:
+#   - 以 Shadowrocket 2026-09-29「優化修訂版」做基礎；Clash 舊版多出嘅 50 條（WeChat/Alipay/Bloomberg/Reuters/海外交易所等）放咗喺檔尾註解，需要先開返
+
+# # === 香港金融及支付相關規則 (優化修訂版) ===
+# # 適用於 Surge / Shadowrocket / Quantumult X
+# # === PROCESS-NAME (主要用於 macOS / Android) ===
+PROCESS-NAME,HSBC HK
+PROCESS-NAME,BOCHK
+PROCESS-NAME,Hang Seng
+PROCESS-NAME,SC Mobile
+PROCESS-NAME,Citibank HK
+PROCESS-NAME,DBS digibank
+PROCESS-NAME,ZA Bank
+PROCESS-NAME,MOX
+PROCESS-NAME,Livi
+PROCESS-NAME,WeLab Bank
+PROCESS-NAME,Airstar Bank
+PROCESS-NAME,Fusion Bank
+PROCESS-NAME,AlipayHK
+PROCESS-NAME,PayMe
+PROCESS-NAME,Octopus
+
+# # === IP-CIDR (傳統銀行固定 IP 段 - 僅供輔助) ===
+IP-CIDR,27.110.72.0/21,no-resolve
+IP-CIDR,103.74.166.0/23,no-resolve
+IP-CIDR,180.233.158.0/23,no-resolve
+IP-CIDR,202.127.168.0/21,no-resolve
+IP-CIDR,166.81.6.0/24,no-resolve
+
+# # === 香港傳統實體銀行 ===
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,hsbc.com
+DOMAIN-SUFFIX,hsbcnet.com
+DOMAIN-SUFFIX,about-hsbc.com.hk
+DOMAIN-SUFFIX,hsbcprivatebank.com
+DOMAIN-SUFFIX,hsbc-am.com
+DOMAIN-SUFFIX,bochk.com
+DOMAIN-SUFFIX,bochk.com.hk
+DOMAIN-SUFFIX,bocgroup.com
+DOMAIN-SUFFIX,boc.cn
+DOMAIN-SUFFIX,bocnet.com.hk
+DOMAIN-SUFFIX,hangseng.com
+DOMAIN-SUFFIX,hangseng.com.hk
+DOMAIN-SUFFIX,hangsengbank.com
+DOMAIN-SUFFIX,sc.com
+DOMAIN-SUFFIX,standardchartered.com.hk
+DOMAIN-SUFFIX,standardchartered.com
+DOMAIN-SUFFIX,scb.com.hk
+DOMAIN-SUFFIX,citibank.com.hk
+DOMAIN-SUFFIX,hkbea.com
+DOMAIN-SUFFIX,hkbea.com.hk
+DOMAIN-SUFFIX,bea.com.hk
+DOMAIN-SUFFIX,bankcomm.com.hk
+DOMAIN-SUFFIX,bankcomm.com
+DOMAIN-SUFFIX,bocom.com.hk
+DOMAIN-SUFFIX,asia.ccb.com
+DOMAIN-SUFFIX,ccbasia.com
+DOMAIN-SUFFIX,cmbwinglungbank.com
+DOMAIN-SUFFIX,winglungbank.com
+DOMAIN-SUFFIX,cmbwlb.com
+DOMAIN-SUFFIX,icbcasia.com
+DOMAIN-SUFFIX,icbc-ltd.com
+DOMAIN-SUFFIX,dahsing.com
+DOMAIN-SUFFIX,dahsingbank.com
+DOMAIN-SUFFIX,dahsingbank.com.hk
+DOMAIN-SUFFIX,chbank.com
+DOMAIN-SUFFIX,chonghing.com
+DOMAIN-SUFFIX,chonghingbank.com
+DOMAIN-SUFFIX,shacombank.com.hk
+DOMAIN-SUFFIX,scbank.com.hk
+DOMAIN-SUFFIX,ncb.com.hk
+DOMAIN-SUFFIX,ncbank.com.hk
+DOMAIN-SUFFIX,dbs.com.hk
+DOMAIN-SUFFIX,dbsbank.com
+DOMAIN-SUFFIX,ocbcwhhk.com
+DOMAIN-SUFFIX,ocbc.com.hk
+DOMAIN-SUFFIX,winghanghk.com
+DOMAIN-SUFFIX,cncbinternational.com
+DOMAIN-SUFFIX,fubonbank.com.hk
+
+# # === 香港虛擬銀行 (Virtual Banks) ===
+DOMAIN-SUFFIX,za.group
+DOMAIN-SUFFIX,zabank.asia
+DOMAIN-SUFFIX,za-tech.com
+DOMAIN-SUFFIX,mox.com
+DOMAIN-SUFFIX,moxbank.com.hk
+DOMAIN-SUFFIX,moxbank.com
+DOMAIN-SUFFIX,mox.com.hk
+DOMAIN-SUFFIX,livi.com.hk
+DOMAIN-SUFFIX,livibank.com
+DOMAIN-SUFFIX,livi-bank.com
+DOMAIN-SUFFIX,welab.bank
+DOMAIN-SUFFIX,welab.co
+DOMAIN-SUFFIX,welabbank.com
+DOMAIN-SUFFIX,airstarbank.com
+DOMAIN-SUFFIX,airstar.com.hk
+DOMAIN-SUFFIX,airstarbank.com.hk
+DOMAIN-SUFFIX,antbank.hk
+DOMAIN-SUFFIX,antbank.com
+DOMAIN-SUFFIX,paob.com.hk
+DOMAIN-SUFFIX,paobhk.com
+DOMAIN-SUFFIX,pabank.hk
+DOMAIN-SUFFIX,oneconnectft.com
+DOMAIN-SUFFIX,fusionbank.com.hk
+DOMAIN-SUFFIX,fusionbank.com
+DOMAIN-SUFFIX,fusion-bank.com
+
+# # === 支付工具 & 電子錢包 ===
+DOMAIN-SUFFIX,alipayhk.com
+DOMAIN-SUFFIX,alipay.com.hk
+DOMAIN-SUFFIX,alipay.hk
+DOMAIN-SUFFIX,wechatpay.com.hk
+DOMAIN-SUFFIX,wechatpay.com
+DOMAIN-SUFFIX,payme.com.hk
+DOMAIN-SUFFIX,payme.hk
+DOMAIN-SUFFIX,payme.com
+DOMAIN-SUFFIX,octopus.com.hk
+DOMAIN-SUFFIX,octopuscards.com
+DOMAIN-SUFFIX,octopuscards.com.hk
+DOMAIN-SUFFIX,octopus.hk
+DOMAIN-SUFFIX,oepay.com.hk
+DOMAIN-SUFFIX,tapngo.com.hk
+DOMAIN-SUFFIX,tapandgo.com.hk
+DOMAIN-SUFFIX,mastercard.com.hk
+DOMAIN-SUFFIX,bocpay.com
+DOMAIN-SUFFIX,bocpay.com.hk
+DOMAIN-SUFFIX,unionpay.com
+DOMAIN-SUFFIX,unionpay.com.hk
+DOMAIN-SUFFIX,unionpayintl.com
+DOMAIN-SUFFIX,chinaunionpay.com
+DOMAIN-SUFFIX,fps.hk
+DOMAIN-SUFFIX,fps.com.hk
+DOMAIN-SUFFIX,hkicl.com.hk
+DOMAIN-SUFFIX,tng.asia
+DOMAIN-SUFFIX,tngwallet.hk
+DOMAIN-SUFFIX,tngfintech.com
+DOMAIN-SUFFIX,jetcopay.com
+DOMAIN-SUFFIX,jetco.com.hk
+DOMAIN-SUFFIX,jetcopay.com.hk
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.com.hk
+DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-SUFFIX,paypalcorp.com
+DOMAIN-SUFFIX,paypal.me
+USER-AGENT,PayPal*
+USER-AGENT,PayMe*
+
+# # === 金融監管及基礎設施 ===
+DOMAIN-SUFFIX,hkma.gov.hk
+DOMAIN-SUFFIX,hkex.com.hk
+DOMAIN-SUFFIX,hkexnews.hk
+DOMAIN-SUFFIX,ccass.com
+DOMAIN-SUFFIX,swift.com
+DOMAIN-SUFFIX,sfc.hk
+DOMAIN-SUFFIX,sfc.gov.hk
+DOMAIN-SUFFIX,rtgs.hk
+DOMAIN-SUFFIX,chats.hk
+DOMAIN-SUFFIX,cmes.hk
+
+# # === 熱門證券、券商、投資平台 (含新加及修正) ===
+DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futunn.com
+DOMAIN-SUFFIX,fututrade.com
+DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX,longbridgeapp.com
+DOMAIN-SUFFIX,longbridge.hk
+DOMAIN-SUFFIX,tigerbrokers.com
+DOMAIN-SUFFIX,tigerfintech.com
+DOMAIN-SUFFIX,webull.hk
+DOMAIN-SUFFIX,webull.com
+DOMAIN-SUFFIX,interactivebrokers.com
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,bsgroup.com.hk
+DOMAIN-SUFFIX,phillip.com.hk
+DOMAIN-SUFFIX,poems.com.hk
+DOMAIN-SUFFIX,kgi.com.hk
+DOMAIN-SUFFIX,kgieworld.com.hk
+DOMAIN-SUFFIX,uobkayhian.com.hk
+DOMAIN-SUFFIX,cash.com.hk
+DOMAIN-SUFFIX,cfsg.com.hk
+DOMAIN-SUFFIX,etnet.com.hk
+DOMAIN-SUFFIX,aastocks.com
+DOMAIN-SUFFIX,money18.com.hk
+DOMAIN-SUFFIX,blackrock.com
+DOMAIN-SUFFIX,vanguard.com.hk
+DOMAIN-SUFFIX,fidelity.com.hk
+DOMAIN-SUFFIX,schroders.com.hk
+DOMAIN-SUFFIX,jpmorgan.com.hk
+DOMAIN-SUFFIX,invesco.com.hk
+DOMAIN-SUFFIX,valuepartners.com.hk
+
+# # === 匯款及國際支付 ===
+DOMAIN-SUFFIX,westernunion.com.hk
+DOMAIN-SUFFIX,moneygram.com.hk
+DOMAIN-SUFFIX,remitly.com
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
+DOMAIN-SUFFIX,xoom.com
+DOMAIN-SUFFIX,worldremit.com
+DOMAIN-SUFFIX,stripe.com
+
+# # === 合規持牌/主要加密貨幣交易所 ===
+DOMAIN-SUFFIX,hashkey.com
+DOMAIN-SUFFIX,hashkey.pro
+DOMAIN-SUFFIX,osl.com
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,gate.io
+
+# # === 保險及強積金 (MPF) ===
+DOMAIN-SUFFIX,mpfa.org.hk
+DOMAIN-SUFFIX,e-mpf.org.hk
+DOMAIN-SUFFIX,manulife.com.hk
+DOMAIN-SUFFIX,aia.com.hk
+DOMAIN-SUFFIX,prudential.com.hk
+DOMAIN-SUFFIX,sunlife.com.hk
+DOMAIN-SUFFIX,fwd.com.hk
+
+# === 已停用（範圍太闊/會誤傷），如真係需要請自行取消註解 ===
+# PROCESS-NAME,HSBC    ← Clash 舊版有，新版已移除；需要先開返
+# PROCESS-NAME,Alipay    ← Clash 舊版有，新版已移除；需要先開返
+# PROCESS-NAME,WeChat    ← Clash 舊版有，新版已移除；需要先開返
+# PROCESS-NAME,Weixin    ← Clash 舊版有，新版已移除；需要先開返
+# PROCESS-NAME,UnionPay    ← Clash 舊版有，新版已移除；需要先開返
+# PROCESS-NAME,PayPal    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,citi.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,citigroup.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,ccb.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,cmbchina.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,icbc.com.cn    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,dbs.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,posb.com.sg    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,ocbc.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,citicbank.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,citic.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,fubon.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,welab.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,antfin.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,alipay.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,wechat.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,weixin.qq.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,tenpay.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN,payme.hsbc.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN,oepay.octopus.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN,bocpay.bochk.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,95516.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,tngjd.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,gopayz.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,gopayz.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN,gopayz.hkbea.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,venmo.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-KEYWORD,paypal    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,quamnet.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,hsbcam.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,hangsengfund.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,binance.us    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,etoro.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,plus500.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,bitfinex.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,huobi.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,kucoin.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,bitget.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,bloomberg.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,reuters.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,morningstar.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,hket.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,hkej.com    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,visa.com.hk    ← Clash 舊版有，新版已移除；需要先開返
+# DOMAIN-SUFFIX,chinabond.com.cn    ← Clash 舊版有，新版已移除；需要先開返

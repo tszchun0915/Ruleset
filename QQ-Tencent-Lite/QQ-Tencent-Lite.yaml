@@ -1,0 +1,20 @@
+# NAME: QQ-Tencent-Lite
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: QQ／支付輕量後綴（唔用完整 Tencent 規則集，避免誤傷海外騰訊雲）→ 🇨🇳 China
+# 建議策略: 🇨🇳 China
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 9
+# SOURCES:
+#   - 由 final 配置內聯 DOMAIN 鏈抽出（北上常用／掃碼點餐／HK 支付）
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+payload:
+  - DOMAIN-SUFFIX,qq.com
+  - DOMAIN-SUFFIX,tencent.com
+  - DOMAIN-SUFFIX,tenpay.com
+  - DOMAIN-SUFFIX,qpic.cn
+  - DOMAIN-SUFFIX,qlogo.cn
+  - DOMAIN-SUFFIX,gtimg.com
+  - DOMAIN-SUFFIX,idqqimg.com
+  - DOMAIN-SUFFIX,urlsec.qq.com
+  - DOMAIN,weixin110.qq.com

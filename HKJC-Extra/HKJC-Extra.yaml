@@ -1,0 +1,15 @@
+# NAME: HKJC-Extra
+# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
+# DESC: 香港賽馬會（馬會／eWin）補充域名；HK 集已有 DOMAIN-KEYWORD hkjc → 🇭🇰 HongKong
+# 建議策略: 🇭🇰 HongKong
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 4
+# SOURCES:
+#   - 用戶地區模型補窿（深圳通／koolcenter／馬會／LineTV）；bm7 LineTV 去掉會誤傷 LINE 嘅 CDN
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+payload:
+  - DOMAIN-SUFFIX,hkjc.com
+  - DOMAIN-SUFFIX,hkjc.edgesuite.net
+  - DOMAIN-KEYWORD,hkjcweb
+  - DOMAIN-KEYWORD,hkjcmobile

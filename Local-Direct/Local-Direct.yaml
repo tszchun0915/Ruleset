@@ -1,0 +1,3 @@
+# Local IPTV / high-priority DIRECT (main still has DDNS/LAN/Apple IP)
+payload:
+  - DOMAIN-SUFFIX,tvpass.org

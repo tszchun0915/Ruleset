@@ -1,0 +1,14 @@
+# NAME: QR-Order-HKTW
+# FORMAT: Loon Remote Rule (.lcf)
+# DESC: 港澳台本地掃碼點餐／菜單（開飯喇、Foodpanda HK／TW）→ DIRECT
+# 建議策略: DIRECT
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 3
+# SOURCES:
+#   - 由 final 配置內聯 DOMAIN 鏈抽出（北上常用／掃碼點餐／HK 支付）
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+
+DOMAIN-SUFFIX,openrice.com
+DOMAIN-SUFFIX,foodpanda.hk
+DOMAIN-SUFFIX,foodpanda.com.tw

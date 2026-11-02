@@ -1,9 +1,7 @@
 # NAME: Japan
-# FORMAT: Loon Remote Rule (.lsr)
-# DESC: 日本動畫、漫畫
+# FORMAT: Loon RULE-SET (.lsr)
 # 建議策略: 🇯🇵 Japan
 # UPDATED: 2026-11-03 (Asia/Hong_Kong)
-# TOTAL: 108
 
 DOMAIN-SUFFIX,abema-tv.com
 DOMAIN-SUFFIX,abema.io

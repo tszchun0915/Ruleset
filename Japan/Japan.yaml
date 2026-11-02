@@ -1,9 +1,7 @@
 # NAME: Japan
-# FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
-# DESC: 日本動畫、漫畫
+# FORMAT: Clash classical
 # 建議策略: 🇯🇵 Japan
 # UPDATED: 2026-11-03 (Asia/Hong_Kong)
-# TOTAL: 108
 payload:
   - DOMAIN-SUFFIX,abema-tv.com
   - DOMAIN-SUFFIX,abema.io

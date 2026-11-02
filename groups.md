@@ -8,6 +8,7 @@
 
 - `AI-Leak`（AI）→ `AI-HK-Allow`（Default）→ `AI`（AI）
 - `MapleStory-Worlds`（Default）放 `KTR`（Korea）之前
+- `Direct`、`AI` 放 `Global` 之前；`Global` 放 `CN` 之前
 - 唔好併：`LineTV-Extra` 入 `Line`；`DNS-Leak-Test` 入 `AI-Leak`；`Dcard` 入 `TW`；`BiliBili-Extra` 入 `bilibili`；`TikTok-Extra` 入 `Tiktok`
 
 ## 同一策略
@@ -16,7 +17,7 @@
 |---|---|
 | China | CN、DianPing、DouYin-Extra、QQ-Tencent-Lite、QR-Order-CN、Taobao-Extra |
 | DIRECT | Direct、CN-Local、AlipayHK、Pay-HK-Direct、QR-Order-HKTW、BiliBili-Extra |
-| Default | AppleService、Bing-Extra、Discord、Discord_Plus、Line、Line-Extra、MapleStory-Worlds |
+| Default | Global、AppleService、Bing-Extra、Discord、Discord_Plus、Line、Line-Extra、MapleStory-Worlds |
 | HongKong | HK、HKJC-Extra |
 | Taiwan | AniGamer、LineTV-Extra、TW、TikTok-Extra |
 
@@ -39,6 +40,7 @@ rules:
   - RULE-SET,AI-Leak,🧠 AI
   - RULE-SET,AI-HK-Allow,🚀 Default
   - RULE-SET,AI,🧠 AI
+  - RULE-SET,Global,🚀 Default
   - RULE-SET,CN,🇨🇳 China
   - RULE-SET,DianPing,🇨🇳 China
   - RULE-SET,DouYin-Extra,🇨🇳 China

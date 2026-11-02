@@ -19,6 +19,7 @@
 | AppleService | Apple 相關補充 |
 | Bank(HK) | 香港銀行 |
 | CN | 中國常用網域 |
+| Global | 日常國際 App |
 | CN-Local | 深圳通、KoolCenter |
 | Direct | 適合直連嘅網域 |
 | Discord | Discord |

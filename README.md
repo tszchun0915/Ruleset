@@ -1,10 +1,10 @@
 # Ruleset
 
-域名規則集（Clash `.yaml`／小火箭 `.list`／Loon `.lsr`）。主配置同訂閱唔放呢度。
+域名規則集（Clash `.yaml`／小火箭 `.list`／Loon `.lcf`）。主配置同訂閱唔放呢度。
 
 ## 思路
 
-按用途拆主題：國際／地區限定／本地直連／安全／防洩漏。配置用 `RULE-SET` 引用；策略喺主配置度定，唔寫死喺呢個 README。
+按用途拆主題：國際／地區限定／本地直連／安全／防洩漏。配置用 `RULE-SET` 引用；策略喺主配置度定，唔寫死喺呢個 README。主題夾保持分開。同一策略可以順住引用，見 `groups.md`。
 
 本地點餐、支付、CN-Local、AlipayHK 一類，客戶端預期用 DIRECT。
 
@@ -19,6 +19,7 @@
 | AppleService | Apple 相關補充 |
 | Bank(HK) | 香港銀行 |
 | CN | 中國常用網域 |
+| Global | 日常國際 App |
 | CN-Local | 深圳通、KoolCenter |
 | Direct | 適合直連嘅網域 |
 | Discord | Discord |
@@ -50,7 +51,7 @@
 | Line-Extra | LINE 補充 |
 | Emby-Extra | Emby 點播補充 |
 
-格式：`<主題>/<主題>.yaml` · `.list` · `.lsr`
+格式：`<主題>/<主題>.yaml` · `.list` · `.lcf`
 
 最後更新：2026-11-02（Asia/Hong_Kong）
 

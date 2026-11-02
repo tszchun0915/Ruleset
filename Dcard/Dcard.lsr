@@ -1,0 +1,16 @@
+# NAME: Dcard
+# FORMAT: Loon Remote Rule (.lsr)
+# DESC: Dcard
+# 建議策略: 🔒 Safe
+# UPDATED: 2026-11-02 (Asia/Hong_Kong)
+# TOTAL: 4
+# SOURCES:
+#   - 由 Clash 配置內聯域名規則抽出
+# CHANGELOG:
+#   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
+#   - 2026-11-02: 獨立主題；唔併入 TW
+
+DOMAIN-SUFFIX,dcard.tw
+DOMAIN-SUFFIX,dcard.io
+DOMAIN-SUFFIX,dcard.link
+DOMAIN-SUFFIX,dcard.cc

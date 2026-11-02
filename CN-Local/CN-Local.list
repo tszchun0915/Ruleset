@@ -4,7 +4,6 @@
 # 建議策略: 🇨🇳 China
 # UPDATED: 2026-11-02 (Asia/Hong_Kong)
 # TOTAL: 3
-# Maintained with Grok Bot / 由 Grok Bot 維護
 # SOURCES:
 #   - 用戶地區模型補窿（深圳通／koolcenter／馬會／LineTV）；bm7 LineTV 去掉會誤傷 LINE 嘅 CDN
 # CHANGELOG:

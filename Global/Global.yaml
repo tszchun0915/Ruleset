@@ -3,17 +3,19 @@
 # DESC: 日常國際 App（Google、YouTube、Meta、X、Telegram、串流等）→ 🚀 Default。唔收中國 App（見 CN）
 # 建議策略: 🚀 Default
 # UPDATED: 2026-11-03 (Asia/Hong_Kong)
-# TOTAL: 121
+# TOTAL: 129
 # SOURCES:
 #   - blackmatrix7 Google／YouTube／Twitter／Instagram／Facebook／Whatsapp／Telegram／Reddit／Wikipedia／Spotify／Netflix／Disney 主域名（2026-11-02）
 #   - Telegram Emby 伺服器討論（2026-11-03）：圖片／預告 CDN；UHD 點播主機走 🚀 Default
 #   - TMDB 官方圖片 CDN image.tmdb.org（Rex 封面，2026-11-03）
+#   - Rex／Forward 模組 CDN 同標題 API（2026-11-03）
 # CHANGELOG:
 #   - 2026-11-02: 初版。只收日常後綴；唔收廣告域名、IP 大段、國家 TLD 全表、amazonaws
 #   - 唔收已有專門策略嘅網域：PayPal（Bank(HK)）、Grok（AI-HK-Allow）、AI／Discord／LINE／TikTok／GitHub
 #   - 主配置：Direct 同 AI 放 Global 之前；CN 放 Global 之後
 #   - 2026-11-03: Emby 討論補充 missav／fourhoi／dmm 圖／mgstage 圖／javtrailers／javp，同 UHD 點播主機（精確 DOMAIN）
 #   - 2026-11-03: TMDB 封面走 🚀 Default：tmdb.org、themoviedb.org、image.tmdb.org（Rex 封面）
+#   - 2026-11-03: Rex／Forward 模組 CDN／標題 API 走 🚀 Default：jsdelivr、unpkg、rexnow、forwardplayer、danmu.icu、weeblify、imdbapi.dev、aimes-soft
 payload:
 
   # === Google / YouTube ===
@@ -154,3 +156,13 @@ payload:
   - DOMAIN-SUFFIX,tmdb.org
   - DOMAIN-SUFFIX,themoviedb.org
   - DOMAIN-SUFFIX,image.tmdb.org
+
+  # === Rex／Forward 模組 CDN／標題 API（🚀 Default） ===
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,unpkg.com
+  - DOMAIN-SUFFIX,rexnow.tv
+  - DOMAIN-SUFFIX,forwardplayer.com
+  - DOMAIN-SUFFIX,danmu.icu
+  - DOMAIN-SUFFIX,danmaku.weeblify.app
+  - DOMAIN-SUFFIX,imdbapi.dev
+  - DOMAIN-SUFFIX,aimes-soft.com

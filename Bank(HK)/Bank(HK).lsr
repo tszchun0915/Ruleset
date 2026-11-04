@@ -2,13 +2,14 @@
 # FORMAT: Loon Remote Rule (.lsr)
 # DESC: 香港銀行、支付、證券、加密貨幣、保險
 # 建議策略: 🔒 Safe（直連/回家）
-# UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 196
+# UPDATED: 2026-11-03 (Asia/Hong_Kong)
+# TOTAL: 207
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Bank(HK).yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Bank(HK).list
 # CHANGELOG:
 #   - 以 Shadowrocket 2026-09-29「優化修訂版」做基礎；Clash 舊版多出嘅 50 條（WeChat/Alipay/Bloomberg/Reuters/海外交易所等）放咗喺檔尾註解，需要先開返
+#   - 2026-11-03: 證券段加入 Vantage Markets／Vantage FX
 
 # # === 香港金融及支付相關規則 (優化修訂版) ===
 # # 適用於 Surge / Shadowrocket / Quantumult X
@@ -197,6 +198,17 @@ DOMAIN-SUFFIX,schroders.com.hk
 DOMAIN-SUFFIX,jpmorgan.com.hk
 DOMAIN-SUFFIX,invesco.com.hk
 DOMAIN-SUFFIX,valuepartners.com.hk
+DOMAIN-SUFFIX,vantagemarkets.com
+DOMAIN-SUFFIX,vantagemarkets.co.uk
+DOMAIN-SUFFIX,vantagemarkets.com.au
+DOMAIN-SUFFIX,vantagemarkets.mu
+DOMAIN-SUFFIX,vantagefx.com
+DOMAIN-SUFFIX,vantagefx.co.uk
+DOMAIN-SUFFIX,vantagefx.com.au
+DOMAIN-SUFFIX,vantagemarketsapp.com
+DOMAIN-SUFFIX,vantagemarketsapp.co.uk
+DOMAIN-SUFFIX,vantagemarketapp.com
+DOMAIN-SUFFIX,vantagehelpcenter.com
 
 # # === 匯款及國際支付 ===
 DOMAIN-SUFFIX,westernunion.com.hk

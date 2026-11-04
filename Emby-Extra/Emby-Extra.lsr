@@ -2,16 +2,20 @@
 # FORMAT: Loon Remote Rule (.lsr)
 # DESC: 私人 Emby／UHD 點播主機補充
 # 建議策略: 🚀 Default
-# UPDATED: 2026-11-02 (Asia/Hong_Kong)
-# TOTAL: 5
+# UPDATED: 2026-11-04 (Asia/Hong_Kong)
+# TOTAL: 8
 # SOURCES:
 #   - 由 Clash 配置內聯域名規則抽出
 # CHANGELOG:
 #   - 2026-11-02: 初版；供 Clash RULE-SET／Loon Remote Rule／Shadowrocket RULE-SET
 #   - 2026-11-02: 只收指定主機；唔併入 Emby 關鍵字集
+#   - 2026-11-04: 這只貓分流（代理／Default）：eb.zzm.li、nl.ftp2.eu.org、vip.covh.eu.org
 
 DOMAIN-SUFFIX,pemby.ednovas.org
 DOMAIN,v1.uhdnow.com
 DOMAIN,v1.uhdgo.com
 DOMAIN,v1-vod1.uhdnow.com
 DOMAIN,v1-vod2.uhdnow.com
+DOMAIN-SUFFIX,eb.zzm.li
+DOMAIN-SUFFIX,nl.ftp2.eu.org
+DOMAIN-SUFFIX,vip.covh.eu.org

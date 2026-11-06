@@ -2,8 +2,8 @@
 # FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
 # DESC: 一定要直連：Apple/Google 基礎、PT/BT、學術等
 # 建議策略: DIRECT
-# UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 298
+# UPDATED: 2026-11-04 (Asia/Hong_Kong)
+# TOTAL: 304
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
@@ -425,6 +425,17 @@ payload:
   - DOMAIN,smart.uhdnow.com
   - DOMAIN,speed.uhdnow.com
   - DOMAIN-SUFFIX,uhdnow.online
+
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  # # 綠茵／蜘蛛體育直播（全直連，模組明示禁止代理）
+  # # UPDATED: 2026-11-04 (Asia/Hong_Kong)
+  # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  - DOMAIN-SUFFIX,9939.com
+  - DOMAIN-SUFFIX,9939zb4.app
+  - DOMAIN-SUFFIX,zzzb.tv
+  - DOMAIN-SUFFIX,zzzb93vip.app
+  - DOMAIN-SUFFIX,zzzb138vip.app
+  - DOMAIN-SUFFIX,k8v4dh4.app
 
   # === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
   - PROCESS-NAME,thunder

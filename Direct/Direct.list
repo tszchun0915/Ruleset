@@ -2,8 +2,8 @@
 # FORMAT: Shadowrocket RULE-SET (.list)
 # DESC: 一定要直連：Apple/Google 基礎、PT/BT、學術等
 # 建議策略: DIRECT
-# UPDATED: 2026-11-04 (Asia/Hong_Kong)
-# TOTAL: 340
+# UPDATED: 2026-11-05 (Asia/Hong_Kong)
+# TOTAL: 341
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
@@ -472,6 +472,7 @@ DOMAIN-SUFFIX,kemono.su
 DOMAIN-SUFFIX,kemono.party
 DOMAIN-SUFFIX,coomer.su
 DOMAIN-SUFFIX,rule34.xxx
+DOMAIN-SUFFIX,dm.syemby.com
 
 # === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
 USER-AGENT,qbittorrent

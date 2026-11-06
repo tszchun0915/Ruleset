@@ -2,8 +2,8 @@
 # FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
 # DESC: 必須美國節點
 # 建議策略: 🇺🇸 USA
-# UPDATED: 2026-11-03 (Asia/Hong_Kong)
-# TOTAL: 41
+# UPDATED: 2026-11-04 (Asia/Hong_Kong)
+# TOTAL: 26
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) USA.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) USA.list
@@ -12,7 +12,6 @@
 payload:
 
   - DOMAIN-SUFFIX,glowp.xyz
-  - DOMAIN-SUFFIX,nhentai.net
   - DOMAIN-SUFFIX,funnynews-media.com
   - DOMAIN-SUFFIX,fnews.media
   - DOMAIN-SUFFIX,files.catbox.moe
@@ -34,20 +33,6 @@ payload:
   - IP-CIDR,104.21.32.1/32,no-resolve
   - IP-CIDR,104.21.48.1/32,no-resolve
   - IP-CIDR,104.21.64.1/32,no-resolve
-  - DOMAIN-SUFFIX,hitomi.la
-  - DOMAIN-SUFFIX,e-hentai.org
-  - DOMAIN-SUFFIX,exhentai.org
-  - DOMAIN-SUFFIX,ehgt.org
-  - DOMAIN-SUFFIX,hath.network
-  - DOMAIN-SUFFIX,hentaifox.com
-  - DOMAIN-SUFFIX,imhentai.xxx
-  - DOMAIN-SUFFIX,simply-hentai.com
-  - DOMAIN-SUFFIX,tsumino.com
-  - DOMAIN-SUFFIX,anchira.to
-  - DOMAIN-SUFFIX,kemono.su
-  - DOMAIN-SUFFIX,kemono.party
-  - DOMAIN-SUFFIX,coomer.su
-  - DOMAIN-SUFFIX,rule34.xxx
   - DOMAIN-SUFFIX,danbooru.donmai.us
   - DOMAIN-SUFFIX,gelbooru.com
   - DOMAIN-SUFFIX,sankakucomplex.com

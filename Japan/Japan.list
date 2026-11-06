@@ -1,7 +1,7 @@
 # NAME: Japan
 # FORMAT: Shadowrocket RULE-SET (.list)
 # 建議策略: 🇯🇵 Japan
-# UPDATED: 2026-11-03 (Asia/Hong_Kong)
+# UPDATED: 2026-11-04 (Asia/Hong_Kong)
 
 DOMAIN-SUFFIX,abema-tv.com
 DOMAIN-SUFFIX,abema.io
@@ -99,16 +99,3 @@ DOMAIN-SUFFIX,toranoana.jp
 DOMAIN-SUFFIX,getchu.com
 DOMAIN-SUFFIX,gyutto.com
 DOMAIN-SUFFIX,dmm-maker.com
-DOMAIN-SUFFIX,mgstage.com
-DOMAIN-SUFFIX,prestige-av.com
-DOMAIN-SUFFIX,sod.co.jp
-DOMAIN-SUFFIX,1pondo.tv
-DOMAIN-SUFFIX,caribbeancom.com
-DOMAIN-SUFFIX,pacopacomama.com
-DOMAIN-SUFFIX,heyzo.com
-DOMAIN-SUFFIX,tokyo-hot.com
-DOMAIN-SUFFIX,javbus.com
-DOMAIN-SUFFIX,javdb.com
-DOMAIN-SUFFIX,javlibrary.com
-DOMAIN-SUFFIX,avgle.com
-DOMAIN-SUFFIX,surrit.com

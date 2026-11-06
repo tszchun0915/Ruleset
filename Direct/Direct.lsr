@@ -3,7 +3,7 @@
 # DESC: 一定要直連：Apple/Google 基礎、PT/BT、學術等
 # 建議策略: DIRECT
 # UPDATED: 2026-11-04 (Asia/Hong_Kong)
-# TOTAL: 304
+# TOTAL: 340
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
@@ -425,7 +425,6 @@ DOMAIN,smart.uhdnow.com
 DOMAIN,speed.uhdnow.com
 DOMAIN-SUFFIX,uhdnow.online
 
-
 # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # # 綠茵／蜘蛛體育直播（全直連，模組明示禁止代理）
 # # UPDATED: 2026-11-04 (Asia/Hong_Kong)
@@ -436,6 +435,43 @@ DOMAIN-SUFFIX,zzzb.tv
 DOMAIN-SUFFIX,zzzb93vip.app
 DOMAIN-SUFFIX,zzzb138vip.app
 DOMAIN-SUFFIX,k8v4dh4.app
+
+DOMAIN-SUFFIX,missav.ai
+DOMAIN-SUFFIX,fourhoi.com
+DOMAIN-SUFFIX,pics.dmm.co.jp
+DOMAIN-SUFFIX,awsimgsrc.dmm.co.jp
+DOMAIN-SUFFIX,image.mgstage.com
+DOMAIN-SUFFIX,javtrailers.com
+DOMAIN-SUFFIX,media.javtrailers.com
+DOMAIN-SUFFIX,javp.cc.cd
+DOMAIN-SUFFIX,mgstage.com
+DOMAIN-SUFFIX,prestige-av.com
+DOMAIN-SUFFIX,sod.co.jp
+DOMAIN-SUFFIX,1pondo.tv
+DOMAIN-SUFFIX,caribbeancom.com
+DOMAIN-SUFFIX,pacopacomama.com
+DOMAIN-SUFFIX,heyzo.com
+DOMAIN-SUFFIX,tokyo-hot.com
+DOMAIN-SUFFIX,javbus.com
+DOMAIN-SUFFIX,javdb.com
+DOMAIN-SUFFIX,javlibrary.com
+DOMAIN-SUFFIX,avgle.com
+DOMAIN-SUFFIX,surrit.com
+DOMAIN-SUFFIX,nhentai.net
+DOMAIN-SUFFIX,hitomi.la
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,ehgt.org
+DOMAIN-SUFFIX,hath.network
+DOMAIN-SUFFIX,hentaifox.com
+DOMAIN-SUFFIX,imhentai.xxx
+DOMAIN-SUFFIX,simply-hentai.com
+DOMAIN-SUFFIX,tsumino.com
+DOMAIN-SUFFIX,anchira.to
+DOMAIN-SUFFIX,kemono.su
+DOMAIN-SUFFIX,kemono.party
+DOMAIN-SUFFIX,coomer.su
+DOMAIN-SUFFIX,rule34.xxx
 
 # === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
 USER-AGENT,qbittorrent

@@ -1,9 +1,9 @@
 # NAME: AI
 # FORMAT: Shadowrocket RULE-SET (.list)
-# DESC: 只包含「港澳未開放 / 官方唔支援香港」嘅 AI 服務；港澳已可直連嘅 AI（Gemini App、Copilot、Meta AI、Perplexity、Grok、Apple Intelligence 等）唔包括，行返 Default/直連
+# DESC: 只包含「港澳未開放 / 官方唔支援香港」嘅 AI 服務；港澳已可直連嘅 AI（Gemini App、Copilot、Meta AI、Perplexity、Grok 等）唔包括，行返 Default/直連。另含最小 Siri ChatGPT 地區+relay 集：Apple Intelligence 介面可能地區可用，但延伸登入同 OpenAI 地區檢測要行 AI（🇺🇸/🇯🇵/🇸🇬/🇹🇼），唔好行香港、AppleService 或 Default
 # 建議策略: 🧠 AI（建議 🇺🇸 USA 或 🇯🇵/🇸🇬/🇹🇼，唔好用 🇭🇰）
-# UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 117
+# UPDATED: 2026-11-07 (Asia/Taipei)
+# TOTAL: 123
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) AI.yaml (2026-10-31)
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) AI.list (2026-09-29)
@@ -11,12 +11,14 @@
 #   - github.com/v2fly/domain-list-community data/anthropic (commit 2026-10-30)
 #   - github.com/v2fly/domain-list-community data/google-deepmind（只取 AI Studio / Gemini API / Notebook 部分） (commit 2026-10-30)
 #   - 地區核對：OpenAI/Anthropic 支援名單無香港；Gemini 網頁/App 2026-03 起支援香港；Gemini API/AI Studio、Gemini Notebook(NotebookLM) 名單無香港；Copilot、Meta AI、Perplexity、Grok 香港可用
+#   - Siri ChatGPT 延伸最小集（2026-11-07）：只取地區檢測 gspe1-ssl.ls.apple.com 同 apple-relay；對照 dler-io AI Suite、ddgksf2013 AppleIntelligence.list，冇成套抄入
 # CHANGELOG:
-#   - 移除港澳已可用：Gemini 網頁/App（gemini.google.com、bard、robinfrontend-pa、proactivebackend-pa、alkalimira-pa）、Microsoft Copilot、Meta AI、Perplexity、Apple Intelligence、DeepMind 網站
+#   - 移除港澳已可用：Gemini 網頁/App（gemini.google.com、bard、robinfrontend-pa、proactivebackend-pa、alkalimira-pa）、Microsoft Copilot、Meta AI、Perplexity、DeepMind 網站
 #   - 移除 apis.google.com（成個 Google 登入都會走 AI 節點）同 DOMAIN-KEYWORD gemini/copilot/sydney（會誤中 GitHub Copilot 等）
 #   - 新增 v2fly 最新 OpenAI（chat.com、sora.com、oaistatsig.com、openai.org…）同 Anthropic（claude.com、claude.app、claudeusercontent.com、clau.de…）域名
 #   - 新增 Gemini Notebook 新域名 notebook.google(.com)；新增 Google Labs/Jules/Antigravity/Gemini CLI
 #   - 修正：Clash 原檔第 166-202 行用咗全形空格(U+3000)縮排，會令 YAML 解析失敗
+#   - 新增最小 Siri ChatGPT 地區+relay 集：gspe1-ssl.ls.apple.com（地區檢測）、apple-relay.apple.com、apple-relay.cloudflare.com、apple-relay.fastly-edge.com、apple-relay.mask.apple-dns.net、DOMAIN-KEYWORD apple-relay（覆蓋其餘 apple-relay.*，包括 akamaized）。Apple Intelligence 介面可能地區可用，但 Siri ChatGPT 延伸登入同 OpenAI 地區鎖要行 AI（🇺🇸/🇯🇵/🇸🇬/🇹🇼），唔好行香港、AppleService 或 Default。唔加 gateway.icloud.com、guzzoni、smoot、cp4.cloudflare.com、api-siri-prod，亦唔加 apple.com / icloud.com / ls.apple.com 後綴
 
 # === OpenAI / ChatGPT / Sora / Codex（香港唔支援） ===
 DOMAIN,browser-intake-datadoghq.com
@@ -48,6 +50,18 @@ DOMAIN-SUFFIX,statsigapi.net
 DOMAIN-SUFFIX,turn.livekit.cloud
 DOMAIN-KEYWORD,chatgpt
 DOMAIN-KEYWORD,openai
+
+# === Apple Intelligence / Siri ChatGPT 延伸（最小集：地區檢測 + relay；OpenAI 地區鎖，需走 AI 節點） ===
+# 只放登入同地區檢測所需。Apple Intelligence 介面可能地區可用，唔係成套搬入。
+# DOMAIN-KEYWORD apple-relay 覆蓋其餘 CDN（例如 akamaized），所以唔再逐條列。
+# 唔加 gateway.icloud.com、guzzoni、smoot、cp4.cloudflare.com、api-siri-prod，
+# 亦唔加 apple.com / icloud.com / ls.apple.com 後綴（會打爛 AppleService / 地圖）。
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,apple-relay.apple.com
+DOMAIN,apple-relay.cloudflare.com
+DOMAIN,apple-relay.fastly-edge.com
+DOMAIN,apple-relay.mask.apple-dns.net
+DOMAIN-KEYWORD,apple-relay
 
 # === Anthropic / Claude / Claude Code（香港唔支援） ===
 DOMAIN,servd-anthropic-website.b-cdn.net

@@ -2,24 +2,93 @@
 # FORMAT: Shadowrocket RULE-SET (.list)
 # DESC: 一定要直連：Apple/Google 基礎、PT/BT、學術等
 # 建議策略: DIRECT
-# UPDATED: 2026-11-05 (Asia/Hong_Kong)
-# TOTAL: 341
+# UPDATED: 2026-11-07 (Asia/Hong_Kong)
+# TOTAL: 400
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
+# CHANGELOG:
+#   - 2026-11-07：由 AppleService 搬入更新 CDN、mask.apple-dns.net、有大陸節點嘅 iTunes 媒體、Apple IP。補 mzstatic／cdn-apple／mapkit／icloud-content、guzzoni、Apple ID 啟用。apple-relay 同 gspe1-ssl 留喺 AI
 
 # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-# # Apple 基礎服務
+# # Apple 基礎服務（大陸可直連）
 # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 DOMAIN,init.ess.apple.com
 DOMAIN,itunes.apple.com
 DOMAIN,smp-device-content.apple.com
 DOMAIN,time.apple.com
+DOMAIN,albert.apple.com
+DOMAIN,gsa.apple.com
+DOMAIN,idmsa.apple.com
+DOMAIN,guzzoni.apple.com
+DOMAIN,guzzoni.smoot.apple.com
 DOMAIN-SUFFIX,weather-analytics-events.apple.com
 DOMAIN-SUFFIX,weather-data.apple.com
 DOMAIN-SUFFIX,weather-map.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,apple-mapkit.com
+DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-KEYWORD,icloud.com
 DOMAIN-KEYWORD,push.apple.com
+DOMAIN-KEYWORD,smp-device
+
+# # Private Relay mask（apple-relay.* 留喺 AI）
+DOMAIN,mask-api.fe.apple-dns.net
+DOMAIN,mask-t.apple-dns.net
+DOMAIN,mask.apple-dns.net
+
+# # 有大陸 CDN 嘅 iTunes 媒體
+DOMAIN-SUFFIX,audio.itunes.apple.com
+DOMAIN-SUFFIX,mvod.itunes.apple.com
+DOMAIN-SUFFIX,play-edge.itunes.apple.com
+DOMAIN-SUFFIX,streamingaudio.itunes.apple.com
+
+# # System OTA / Updates / CDN
+DOMAIN,appldnld.apple.com
+DOMAIN,gdmf.apple.com
+DOMAIN,gg.apple.com
+DOMAIN,gs.apple.com
+DOMAIN,ig.apple.com
+DOMAIN,mesu.apple.com
+DOMAIN,ocsp.apple.com
+DOMAIN,osrecovery.apple.com
+DOMAIN,oscdn.apple.com
+DOMAIN,skl.apple.com
+DOMAIN,swcdn.apple.com
+DOMAIN,swdist.apple.com
+DOMAIN,swdownload.apple.com
+DOMAIN,swscan.apple.com
+DOMAIN,xp.apple.com
+DOMAIN,configuration.apple.com
+DOMAIN,gdmf.g.aaplimg.com
+DOMAIN,mesu.g.aaplimg.com
+DOMAIN,ocsp.g.aaplimg.com
+DOMAIN,xp.g.aaplimg.com
+DOMAIN,appldnld-cdn.apple.com.akadns.net
+DOMAIN,gdmf-cdn.apple.com.akadns.net
+DOMAIN,gg-cdn.apple.com.akadns.net
+DOMAIN,iphonesubmissions-cdn.apple.com.akadns.net
+DOMAIN,mesu-cdn.apple.com.akadns.net
+DOMAIN,ocsp-cdn.apple.com.akadns.net
+DOMAIN,radarsubmissions-cdn.apple.com.akadns.net
+DOMAIN,swscan-cdn.apple.com.akadns.net
+DOMAIN,xp-cdn.apple.com.akadns.net
+DOMAIN-KEYWORD,apple-support.akadns.net
+DOMAIN-KEYWORD,apple.com.akadns.net
+DOMAIN-KEYWORD,apple.com.edgekey.net
+
+# # Apple IP（主配置要排喺 AppleService 之後）
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,139.178.128.0/18,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,192.35.50.0/24,no-resolve
+IP-CIDR,198.183.17.0/24,no-resolve
+IP-CIDR,205.180.175.0/24,no-resolve
+IP-CIDR,2403:300::/32,no-resolve
+IP-CIDR,2620:149::/32,no-resolve
 
 # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # # Google 直連服務 (下載、推送、對時)

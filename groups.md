@@ -7,7 +7,7 @@
 ## 次序
 
 - `AI-Leak`（AI）→ `AI-HK-Allow`（Default）→ `AI`（AI）→ `AppleService`（Default）→ `Direct` → `Global`；`Global` 放 `CN` 之前
-- `AppleService` 只係國際媒體／新聞／TestFlight／國際地圖瓦片。`17.0.0.0/8` 喺 Direct，所以 AppleService 一定要排喺 Direct 前面
+- `AppleService` 係國際媒體／新聞／TestFlight／國際地圖瓦片，另加香港 Apple ID 登入（`albert`、`gsa`、`gsa-ws`、`idmsa`、`appleid.apple.com`、`id.apple.com`、`account.apple.com`、`iforgot.apple.com`、`setup.icloud.com` 同 `pNN-setup.icloud.com` 分區）。`17.0.0.0/8` 已唔喺 Direct；Direct 只留 APNs 官方細段。AppleService 仍要排喺 Direct 前面：Direct 有 `DOMAIN-SUFFIX,icloud.com`，排反會把 setup 分區直連
 - `MapleStory-Worlds`（Default）放 `KTR`（Korea）之前
 - 唔好併：`LineTV-Extra` 入 `Line`；`DNS-Leak-Test` 入 `AI-Leak`；`Dcard` 入 `TW`；`BiliBili-Extra` 入 `bilibili`；`TikTok-Extra` 入 `Tiktok`
 

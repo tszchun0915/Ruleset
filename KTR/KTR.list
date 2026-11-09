@@ -3,16 +3,36 @@
 # DESC: Tales Runner 韓服
 # 建議策略: 🇰🇷 Korea
 # UPDATED: 2026-11-09 (Asia/Hong_Kong)
-# TOTAL: 20
+# TOTAL: 40
 # SOURCES:
 #   - github.com/tszchun0915/Clash KTR.yaml
 #   - github.com/tszchun0915/Shadowrocket KTR.list
 # CHANGELOG:
-#   - 2026-11-09: RHAON／STOVE／Hangame／Payco；Tales Runner + Stove 進程
+#   - 2026-11-09: RHAON／STOVE／Hangame／Payco 域名；Tales Runner + Stove 進程
 
-DOMAIN-SUFFIX,rhaon.co.kr
+DOMAIN-SUFFIX,tr.rhaon.co.kr
+DOMAIN-SUFFIX,tr.game.rhaon.co.kr
+DOMAIN-SUFFIX,trimage.rhaon.co.kr
+DOMAIN-SUFFIX,resource.rhaon.co.kr
+DOMAIN-SUFFIX,assets.rhaon.co.kr
 DOMAIN,tr-rhaon.oc.nhncloud.com
+DOMAIN-SUFFIX,rhaon.co.kr
+DOMAIN-SUFFIX,tr.game.onstove.com
+DOMAIN-SUFFIX,game.onstove.com
+DOMAIN-SUFFIX,account.onstove.com
+DOMAIN-SUFFIX,login.onstove.com
+DOMAIN-SUFFIX,member.onstove.com
+DOMAIN-SUFFIX,ssl.onstove.com
+DOMAIN-SUFFIX,download.onstove.com
+DOMAIN-SUFFIX,patch.onstove.com
+DOMAIN-SUFFIX,cdn.onstove.com
+DOMAIN-SUFFIX,static.onstove.com
+DOMAIN-SUFFIX,api.onstove.com
+DOMAIN-SUFFIX,log.onstove.com
+DOMAIN-SUFFIX,edge.onstove.com
 DOMAIN-SUFFIX,onstove.com
+DOMAIN-SUFFIX,tr.hangame.com
+DOMAIN-SUFFIX,www.hangame.com
 DOMAIN-SUFFIX,hangame.com
 DOMAIN-SUFFIX,payco.com
 PROCESS-NAME,talesrunner.exe

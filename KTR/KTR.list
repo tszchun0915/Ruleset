@@ -2,44 +2,31 @@
 # FORMAT: Shadowrocket RULE-SET (.list)
 # DESC: Tales Runner 韓服
 # 建議策略: 🇰🇷 Korea
-# UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 12
-# PROPOSED: 淨係留跑跑韓服真正需要：Stove / Rhaon / Hangame / Payco / pokipoki + PROCESS-NAME。naver / daum（成個韓國入口網）、nexon（會同 MapleStory Worlds 撞）、netmarble / pmang / mgame / plaync / krafton / bugs / inven（其他遊戲/網站）都同跑跑無關，會令佢哋全部行韓國節點
+# UPDATED: 2026-11-09 (Asia/Hong_Kong)
+# TOTAL: 20
 # SOURCES:
-#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) KTR.yaml
-#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) KTR.list
+#   - github.com/tszchun0915/Clash KTR.yaml
+#   - github.com/tszchun0915/Shadowrocket KTR.list
+# CHANGELOG:
+#   - 2026-11-09: RHAON／STOVE／Hangame／Payco；Tales Runner + Stove 進程
 
-# # === Tales Runner 韓服 (테일즈런너) 優化規則 - 2026年4月版 ===
-# # 專注 Rhaon + Onstove，減少誤觸
-# # === 核心遊戲伺服器（最重要，優先放最前） ===
-DOMAIN-SUFFIX,onstove.com
 DOMAIN-SUFFIX,rhaon.co.kr
-
-# # === 官方網站 & Launcher ===
+DOMAIN,tr-rhaon.oc.nhncloud.com
+DOMAIN-SUFFIX,onstove.com
 DOMAIN-SUFFIX,hangame.com
-
-# # === 帳號登入、會員、支付 ===
 DOMAIN-SUFFIX,payco.com
-# [建議刪除] DOMAIN-SUFFIX,naver.com
-# [建議刪除] DOMAIN-SUFFIX,daum.net
-
-# # === 其他韓國遊戲平台相關（保留但範圍較窄） ===
-# [建議刪除] DOMAIN-SUFFIX,nexon.com
-# [建議刪除] DOMAIN-SUFFIX,netmarble.com
-# [建議刪除] DOMAIN-SUFFIX,netmarble.net
-# [建議刪除] DOMAIN-SUFFIX,pmang.com
-# [建議刪除] DOMAIN-SUFFIX,mgame.com
-# [建議刪除] DOMAIN-SUFFIX,plaync.com
-# [建議刪除] DOMAIN-SUFFIX,krafton.com
-# [建議刪除] DOMAIN-SUFFIX,bugs.co.kr
-# [建議刪除] DOMAIN-SUFFIX,inven.co.kr
-DOMAIN-SUFFIX,pokipoki.kr
-DOMAIN-SUFFIX,pokipoki.co.kr
-
-# # === PROCESS-NAME（建議加入，Launcher 同遊戲本體走代理） ===
-PROCESS-NAME,TRGame.exe
-PROCESS-NAME,TalesRunner.exe
-PROCESS-NAME,TRLauncher.exe
-PROCESS-NAME,OnstoveLauncher.exe
-PROCESS-NAME,RhaonLauncher.exe
-PROCESS-NAME,HangameLauncher.exe
+PROCESS-NAME,talesrunner.exe
+PROCESS-NAME,trgame.exe
+PROCESS-NAME,ucsvc.exe
+PROCESS-NAME,upfile.exe
+PROCESS-NAME,xldr_talesrunner_kr_loader_win32.exe
+PROCESS-NAME,xm.exe
+PROCESS-NAME,CefStoveRenderProcess.exe
+PROCESS-NAME,CrashSender1402.exe
+PROCESS-NAME,sgup_auto.exe
+PROCESS-NAME,STOVE.exe
+PROCESS-NAME,Uninstall.exe
+PROCESS-NAME,Launcher.exe
+PROCESS-NAME,LauncherUpdater.exe
+PROCESS-NAME,RestartAgent.exe
+PROCESS-NAME,unins000.exe

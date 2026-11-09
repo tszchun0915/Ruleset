@@ -2,18 +2,18 @@
 # FORMAT: Loon Remote Rule (.lsr)
 # DESC: 港服跑跑卡丁車/Tales Runner（台灣[新台北] IP）
 # 建議策略: 👟 HKTR
-# UPDATED: 2026-10-31 (Asia/Taipei)
-# TOTAL: 6
-# PROPOSED: 刪 198.18.0.0/24：呢個係 fake-IP 網段，會誤捉其他域名
+# UPDATED: 2026-11-09 (Asia/Hong_Kong)
+# TOTAL: 7
 # SOURCES:
-#   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) HKTR.yaml
-#   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) HKTR.list
+#   - github.com/tszchun0915/Clash HKTR.yaml
+#   - github.com/tszchun0915/Shadowrocket HKTR.list
+# CHANGELOG:
+#   - 2026-11-09: DOMAIN-SUFFIX,funtown.hk；移除 198.18.0.0/24
 
-# # 港跑 (全部都屬於台灣[新台北]IP)
 DOMAIN-SUFFIX,talesrunner.com.hk
 DOMAIN-SUFFIX,funtown.com.hk
+DOMAIN-SUFFIX,funtown.hk
 DOMAIN-SUFFIX,runonline.hk
 IP-CIDR,18.178.95.0/24,no-resolve
-# [建議刪除] IP-CIDR,198.18.0.0/24,no-resolve
 IP-CIDR,210.242.202.0/24,no-resolve
 PROCESS-NAME,xldr_TalesRunner_HK_loader_x64.exe

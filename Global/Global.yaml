@@ -2,8 +2,8 @@
 # FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
 # DESC: 日常國際 App（Google、YouTube、Meta、X、Telegram、串流等）→ 🚀 Default。唔收中國 App（見 CN）
 # 建議策略: 🚀 Default
-# UPDATED: 2026-11-10 (Asia/Hong_Kong)
-# TOTAL: 144
+# UPDATED: 2026-11-12 (Asia/Hong_Kong)
+# TOTAL: 156
 # SOURCES:
 #   - blackmatrix7 Google／YouTube／Twitter／Instagram／Facebook／Whatsapp／Telegram／Reddit／Wikipedia／Spotify／Netflix／Disney 主域名（2026-11-02）
 #   - Telegram Emby 伺服器討論（2026-11-03）：圖片／預告 CDN；UHD 點播主機走 🚀 Default
@@ -12,6 +12,7 @@
 #   - Microsoft 365 Worldwide endpoints（Exchange ID 1／2／8；Common ID 56／59，2026-11-07）：Apple Mail Outlook／Exchange Online 同 Modern Auth
 #   - Apple Mail Yahoo（2026-11-07）：yahoo.com、ymail.com、yahooapis.com、yahoo.net；唔收廣告／追蹤域名
 #   - Telegram REX 模組研討（2026-11-10）：稀饭动漫（xifanacg）站點同播放主機走 🚀 Default
+#   - Telegram REX 模組研討（2026-11-11）：Rex 直播電視 rex.livetv.gslb（Bolinxxlin）串流 IP／域名同封面 images.weserv.nl；upload.wikimedia.org 已由 wikimedia.org 覆蓋
 # CHANGELOG:
 #   - 2026-11-02: 初版。只收日常後綴；唔收廣告域名、IP 大段、國家 TLD 全表、amazonaws
 #   - 唔收已有專門策略嘅網域：PayPal（Bank(HK)）、Grok（AI-HK-Allow）、AI／Discord／LINE／TikTok／GitHub
@@ -23,6 +24,7 @@
 #   - 2026-11-07: Apple Mail Yahoo 走 🚀 Default：yahoo.com、ymail.com、yahooapis.com、yahoo.net（唔收廣告／追蹤）
 #   - 2026-11-07: Gmail 已有 gmail.com／google.com 後綴；smtp.gmail.com、imap.gmail.com 由 gmail.com 覆蓋，唔再重複
 #   - 2026-11-10: Rex／Forward 模組／稀饭动漫走 🚀 Default：api.xifanacg.com、next.xifanacg.com、anime.xifanacg.com、apn.moedot.net、play.xfvod.pro、dl.playxf.top
+#   - 2026-11-11: Rex 直播電視（rex.livetv.gslb）串流／封面走 🚀 Default：9 條 IP-CIDR /32（精確地址，唔係 IP 大段）、DOMAIN bztv.tvbus.cc、phoneal.qing.mgtv.com、images.weserv.nl。upload.wikimedia.org 已由 DOMAIN-SUFFIX,wikimedia.org 覆蓋，唔再重複。phoneal.qing.mgtv.com 用精確 DOMAIN，蓋過 CN 嘅 DOMAIN-SUFFIX,mgtv.com（主配置 CN 喺 Global 之後，呢條先中並走 Default）；唔改 CN。唔收成個 tvbus.cc
 payload:
 
   # === Google / YouTube ===
@@ -194,3 +196,17 @@ payload:
   - DOMAIN-SUFFIX,ymail.com
   - DOMAIN-SUFFIX,yahooapis.com
   - DOMAIN-SUFFIX,yahoo.net
+
+  # === Rex 直播電視 串流／封面（rex.livetv.gslb；🚀 Default） ===
+  - IP-CIDR,107.150.60.122/32,no-resolve
+  - IP-CIDR,173.208.212.130/32,no-resolve
+  - IP-CIDR,192.151.150.154/32,no-resolve
+  - IP-CIDR,192.187.124.34/32,no-resolve
+  - IP-CIDR,198.204.228.26/32,no-resolve
+  - IP-CIDR,204.12.221.218/32,no-resolve
+  - IP-CIDR,38.75.136.137/32,no-resolve
+  - IP-CIDR,63.141.230.178/32,no-resolve
+  - IP-CIDR,69.30.245.50/32,no-resolve
+  - DOMAIN,bztv.tvbus.cc
+  - DOMAIN,phoneal.qing.mgtv.com
+  - DOMAIN,images.weserv.nl

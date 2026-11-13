@@ -1,13 +1,14 @@
 # NAME: Direct
 # FORMAT: Shadowrocket RULE-SET (.list)
-# DESC: 一定要直連：Apple 更新／CDN／推送／iCloud 資料、Google 基礎、PT/BT、學術等。香港 Apple ID 登入唔喺呢度
+# DESC: 一定要直連：Apple 更新／CDN／iCloud 資料、Google 基礎、PT/BT、學術等。香港 Apple ID 登入同官方 APNs 推送唔喺呢度
 # 建議策略: DIRECT
-# UPDATED: 2026-11-07 (Asia/Hong_Kong)
-# TOTAL: 405
+# UPDATED: 2026-11-13 (Asia/Hong_Kong)
+# TOTAL: 395
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
 # CHANGELOG:
+#   - 2026-11-13：官方 APNs 推送搬去 AppleService → Default（DOMAIN-KEYWORD,push.apple.com 同 support.apple.com/102266 嘅 IPv4／IPv6 細段）。17.0.0.0/8 仍然冇加。非官方、非 17/8 嘅 Apple IP 細段留直連
 #   - 2026-11-07：香港 Apple ID 登入搬去 AppleService。刪 DOMAIN-KEYWORD icloud.com（改精確後綴，中國區 .cn 另列）。刪 17.0.0.0/8 同兩條 Apple IPv6 /32，只留 APNs 官方細段。guzzoni、更新 CDN、mzstatic 留直連
 #   - 2026-11-07：由 AppleService 搬入更新 CDN、mask.apple-dns.net、有大陸節點嘅 iTunes 媒體、Apple IP。補 mzstatic／cdn-apple／mapkit／icloud-content、guzzoni、Apple ID 啟用。apple-relay 同 gspe1-ssl 留喺 AI
 
@@ -35,7 +36,7 @@ DOMAIN-SUFFIX,icloud.com
 # 中國區 iCloud（貴州）。SUFFIX icloud.com 中唔到 .cn
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,icloud.com.akadns.net
-DOMAIN-KEYWORD,push.apple.com
+# 官方 APNs（DOMAIN-KEYWORD,push.apple.com）已搬去 AppleService → Default
 DOMAIN-KEYWORD,smp-device
 
 # # Private Relay mask（apple-relay.* 留喺 AI）
@@ -83,18 +84,13 @@ DOMAIN-KEYWORD,apple-support.akadns.net
 DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,apple.com.edgekey.net
 
-# # Apple IP（推送細段；唔再包成個 17/8）
-# 已刪 17.0.0.0/8、2403:300::/32、2620:149::/32。
+# # Apple IP（非 17/8 細段；官方 APNs 已搬去 AppleService）
+# 官方 APNs（DOMAIN-KEYWORD,push.apple.com 同 support.apple.com/102266 嘅 IPv4／IPv6 細段）喺 AppleService → Default。
+# 已刪 17.0.0.0/8、2403:300::/32、2620:149::/32，今次都冇加返。
 # 2026-11-07 解析：帳號喺 17.32／17.23／17.111／17.157／17.248；setup／gateway 亦有 2620:149:a41::。
 # 成段直連會喺 IP-only 時把香港 Apple ID，同 apple-relay（17.248／17.250、2620:149:a41::）強制 DIRECT。
-# 只留 Apple 公開嘅 APNs 段（support.apple.com/102266）。courier.push.apple.com 實測喺 17.57.144.0/22。
 # 更新／對時／OCSP 靠上面域名直連（mesu、swcdn、ocsp、time 實測 17.253 同 2620:149:a10::），唔再靠成段。
-# AppleService 仍然要排喺 Direct 前面（下面有 DOMAIN-SUFFIX,icloud.com）。
-IP-CIDR,17.249.0.0/16,no-resolve
-IP-CIDR,17.252.0.0/16,no-resolve
-IP-CIDR,17.57.144.0/22,no-resolve
-IP-CIDR,17.188.128.0/18,no-resolve
-IP-CIDR,17.188.20.0/23,no-resolve
+# AppleService 仍然要排喺 Direct 前面（Direct 有 DOMAIN-SUFFIX,icloud.com）。
 # 以下細段唔係 17/8。今次帳號／setup／relay 解析冇落到呢度，所以保留；唔當 CDN-only 證明。
 IP-CIDR,139.178.128.0/18,no-resolve
 IP-CIDR,144.178.0.0/19,no-resolve
@@ -103,11 +99,6 @@ IP-CIDR,65.199.22.0/23,no-resolve
 IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
 IP-CIDR,205.180.175.0/24,no-resolve
-# APNs IPv6（官方細段，唔係成個 2403:300::/32／2620:149::/32）
-IP-CIDR,2620:149:a44::/48,no-resolve
-IP-CIDR,2403:300:a42::/48,no-resolve
-IP-CIDR,2403:300:a51::/48,no-resolve
-IP-CIDR,2a01:b740:a42::/48,no-resolve
 
 # # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 # # Google 直連服務 (下載、推送、對時)

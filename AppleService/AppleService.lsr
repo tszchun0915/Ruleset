@@ -1,17 +1,18 @@
 # NAME: AppleService
 # FORMAT: Loon Remote Rule (.lsr)
-# DESC: 港澳可用、大陸不穩嘅 Apple（Apple 帳號登入、新聞、TV+、試聽／直播、TestFlight、國際地圖瓦片）→ Default。更新／CDN／mask／推送／iCloud 資料面喺 Direct。Siri ChatGPT relay 喺 AI
+# DESC: 港澳可用、大陸不穩嘅 Apple（Apple 帳號登入、APNs 推送、新聞、TV+、試聽／直播、TestFlight、國際地圖瓦片）→ Default。更新／CDN／mask／iCloud 資料面喺 Direct。Siri ChatGPT relay 喺 AI
 # 建議策略: 🚀 Default
-# UPDATED: 2026-11-07 (Asia/Hong_Kong)
-# TOTAL: 211
+# UPDATED: 2026-11-13 (Asia/Hong_Kong)
+# TOTAL: 221
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) AppleService.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) AppleService.list
 #   - v2fly domain-list-community data/apple-tvplus、data/itunes（@cn 留 Direct）
 # CHANGELOG:
+#   - 2026-11-13：由 Direct 搬入官方 APNs 推送 → Default。DOMAIN-KEYWORD,push.apple.com，同 support.apple.com/102266 嘅 IPv4（17.249.0.0/16、17.252.0.0/16、17.57.144.0/22、17.188.128.0/18、17.188.20.0/23）同 IPv6（2620:149:a44::/48、2403:300:a42::/48、2403:300:a51::/48、2a01:b740:a42::/48）。仍然唔加 17.0.0.0/8
 #   - 2026-11-07：香港 Apple ID 登入改行 Default。搬入 albert、gsa、gsa-ws、idmsa、appleid.apple.com、id.apple.com、account.apple.com、iforgot.apple.com、setup.icloud.com 同 pNN-setup 分區（唔含 .cn）。唔加 gspe1-ssl、apple-relay、guzzoni、apple.com／icloud.com 後綴
 #   - 2026-11-07：Default 只留國際媒體／新聞／TestFlight／三條國際地圖瓦片。更新 CDN、mask.*、17.0.0.0/8 搬去 Direct；刪除 Maps／App Store USER-AGENT。唔加 gspe1-ssl、apple-relay、ls.apple.com 後綴、apple.com 後綴
-# 主配置：AI 之後、Direct 之前。Direct 有 DOMAIN-SUFFIX,icloud.com；帳號規則一定要排前面。17.0.0.0/8 已從 Direct 刪走
+# 主配置：AI 之後、Direct 之前。Direct 有 DOMAIN-SUFFIX,icloud.com；帳號規則一定要排前面。官方 APNs 推送喺呢度。17.0.0.0/8 已從 Direct 刪走，呢度仍然唔加
 
 # # Apple 帳號／香港 Apple ID 登入（Default）
 # 大陸直連會卡住香港 Apple ID，Siri ChatGPT 延伸登入一併失敗；規則寫死 DIRECT 時，手動揀 Global／Default 都冇用。
@@ -202,6 +203,22 @@ DOMAIN,p195-setup.icloud.com
 DOMAIN,p196-setup.icloud.com
 DOMAIN,p197-setup.icloud.com
 DOMAIN,p198-setup.icloud.com
+
+# # APNs／推送（Default）
+# 由 Direct 搬入。官方名單：support.apple.com/102266（2026-11-13）。
+# 保持 DOMAIN-KEYWORD,push.apple.com，唔改 DOMAIN-SUFFIX。
+# 唔加 17.0.0.0/8，亦唔加舊嘅 IPv6 /32：IP-only 會把香港 Apple ID 同 apple-relay 強制 DIRECT。
+DOMAIN-KEYWORD,push.apple.com
+IP-CIDR,17.249.0.0/16,no-resolve
+IP-CIDR,17.252.0.0/16,no-resolve
+IP-CIDR,17.57.144.0/22,no-resolve
+IP-CIDR,17.188.128.0/18,no-resolve
+IP-CIDR,17.188.20.0/23,no-resolve
+# IPv6 必須用 IP-CIDR6。官方 APNs 細段（support.apple.com/102266）
+IP-CIDR6,2620:149:a44::/48,no-resolve
+IP-CIDR6,2403:300:a42::/48,no-resolve
+IP-CIDR6,2403:300:a51::/48,no-resolve
+IP-CIDR6,2a01:b740:a42::/48,no-resolve
 
 # # App Store / iTunes（下載 CDN mzstatic 喺 Direct）
 DOMAIN,apps.apple.com

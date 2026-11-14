@@ -54,6 +54,6 @@
 
 格式：`<主題>/<主題>.yaml` · `.list` · `.lsr`
 
-最後更新：2026-11-13（Asia/Hong_Kong）
+最後更新：2026-11-14（Asia/Hong_Kong）
 
 <!-- Maintained with Grok Bot -->

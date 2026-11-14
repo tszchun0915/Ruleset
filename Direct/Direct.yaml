@@ -2,12 +2,13 @@
 # FORMAT: Clash / Mihomo rule-provider (behavior: classical, format: yaml)
 # DESC: 一定要直連：Apple 更新／CDN／iCloud 資料、Google 基礎、PT/BT、學術等。香港 Apple ID 登入同官方 APNs 推送唔喺呢度
 # 建議策略: DIRECT
-# UPDATED: 2026-11-13 (Asia/Hong_Kong)
-# TOTAL: 391
+# UPDATED: 2026-11-14 (Asia/Hong_Kong)
+# TOTAL: 354
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) Direct.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) Direct.list
 # CHANGELOG:
+#   - 2026-11-14：大陸 Direct 去唔到呢批主機，搬走。日本片商／CDN／JAV 索引去 Japan（🇯🇵 Japan）；國際圖庫同 dm.syemby.com（瞬影彈幕）去 Global → 🚀 Default，大陸同香港都用 Default／家居 VPN，唔強制美國節點。pics.dmm.co.jp／awsimgsrc.dmm.co.jp 唔再另列，由 Japan 已有嘅 dmm.co.jp 覆蓋
 #   - 2026-11-13：官方 APNs 推送搬去 AppleService → Default（DOMAIN-KEYWORD,push.apple.com 同 support.apple.com/102266 嘅 IPv4／IPv6 細段）。17.0.0.0/8 仍然冇加。非官方、非 17/8 嘅 Apple IP 細段留直連
 #   - 2026-11-07：香港 Apple ID 登入搬去 AppleService。刪 DOMAIN-KEYWORD icloud.com（改精確後綴，中國區 .cn 另列）。刪 17.0.0.0/8 同兩條 Apple IPv6 /32，只留 APNs 官方細段。guzzoni、更新 CDN、mzstatic 留直連
 #   - 2026-11-07：由 AppleService 搬入更新 CDN、mask.apple-dns.net、有大陸節點嘅 iTunes 媒體、Apple IP。補 mzstatic／cdn-apple／mapkit／icloud-content、guzzoni、Apple ID 啟用。apple-relay 同 gspe1-ssl 留喺 AI
@@ -515,44 +516,6 @@ payload:
   - DOMAIN-SUFFIX,zzzb93vip.app
   - DOMAIN-SUFFIX,zzzb138vip.app
   - DOMAIN-SUFFIX,k8v4dh4.app
-
-  - DOMAIN-SUFFIX,missav.ai
-  - DOMAIN-SUFFIX,fourhoi.com
-  - DOMAIN-SUFFIX,pics.dmm.co.jp
-  - DOMAIN-SUFFIX,awsimgsrc.dmm.co.jp
-  - DOMAIN-SUFFIX,image.mgstage.com
-  - DOMAIN-SUFFIX,javtrailers.com
-  - DOMAIN-SUFFIX,media.javtrailers.com
-  - DOMAIN-SUFFIX,javp.cc.cd
-  - DOMAIN-SUFFIX,mgstage.com
-  - DOMAIN-SUFFIX,prestige-av.com
-  - DOMAIN-SUFFIX,sod.co.jp
-  - DOMAIN-SUFFIX,1pondo.tv
-  - DOMAIN-SUFFIX,caribbeancom.com
-  - DOMAIN-SUFFIX,pacopacomama.com
-  - DOMAIN-SUFFIX,heyzo.com
-  - DOMAIN-SUFFIX,tokyo-hot.com
-  - DOMAIN-SUFFIX,javbus.com
-  - DOMAIN-SUFFIX,javdb.com
-  - DOMAIN-SUFFIX,javlibrary.com
-  - DOMAIN-SUFFIX,avgle.com
-  - DOMAIN-SUFFIX,surrit.com
-  - DOMAIN-SUFFIX,nhentai.net
-  - DOMAIN-SUFFIX,hitomi.la
-  - DOMAIN-SUFFIX,e-hentai.org
-  - DOMAIN-SUFFIX,exhentai.org
-  - DOMAIN-SUFFIX,ehgt.org
-  - DOMAIN-SUFFIX,hath.network
-  - DOMAIN-SUFFIX,hentaifox.com
-  - DOMAIN-SUFFIX,imhentai.xxx
-  - DOMAIN-SUFFIX,simply-hentai.com
-  - DOMAIN-SUFFIX,tsumino.com
-  - DOMAIN-SUFFIX,anchira.to
-  - DOMAIN-SUFFIX,kemono.su
-  - DOMAIN-SUFFIX,kemono.party
-  - DOMAIN-SUFFIX,coomer.su
-  - DOMAIN-SUFFIX,rule34.xxx
-  - DOMAIN-SUFFIX,dm.syemby.com
 
   # === 由 Shadowrocket 版本合併（兩邊原本唔一致，已合併） ===
   - PROCESS-NAME,thunder

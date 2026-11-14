@@ -1,7 +1,9 @@
 # NAME: Japan
 # FORMAT: Clash classical
 # 建議策略: 🇯🇵 Japan
-# UPDATED: 2026-11-04 (Asia/Hong_Kong)
+# UPDATED: 2026-11-14 (Asia/Hong_Kong)
+# CHANGELOG:
+#   - 2026-11-14：由 Direct 搬入日本片商／JAV 索引／JP 向站（大陸 Direct 去唔到）→ 🇯🇵 Japan。pics.dmm.co.jp、awsimgsrc.dmm.co.jp 已由 dmm.co.jp 覆蓋，唔再重複；image.mgstage.com 由 mgstage.com 覆蓋；media.javtrailers.com 由 javtrailers.com 覆蓋
 payload:
   - DOMAIN-SUFFIX,abema-tv.com
   - DOMAIN-SUFFIX,abema.io
@@ -99,3 +101,25 @@ payload:
   - DOMAIN-SUFFIX,getchu.com
   - DOMAIN-SUFFIX,gyutto.com
   - DOMAIN-SUFFIX,dmm-maker.com
+
+  # 由 Direct 搬入：日本片商／JAV 索引／JP 向站（大陸 Direct 去唔到）
+  # pics.dmm.co.jp、awsimgsrc.dmm.co.jp 由上面 dmm.co.jp 覆蓋；image.mgstage.com 由 mgstage.com 覆蓋；media.javtrailers.com 由 javtrailers.com 覆蓋
+  - DOMAIN-SUFFIX,missav.ai
+  - DOMAIN-SUFFIX,fourhoi.com
+  - DOMAIN-SUFFIX,javtrailers.com
+  - DOMAIN-SUFFIX,javp.cc.cd
+  - DOMAIN-SUFFIX,mgstage.com
+  - DOMAIN-SUFFIX,prestige-av.com
+  - DOMAIN-SUFFIX,sod.co.jp
+  - DOMAIN-SUFFIX,1pondo.tv
+  - DOMAIN-SUFFIX,caribbeancom.com
+  - DOMAIN-SUFFIX,pacopacomama.com
+  - DOMAIN-SUFFIX,heyzo.com
+  - DOMAIN-SUFFIX,tokyo-hot.com
+  - DOMAIN-SUFFIX,javbus.com
+  - DOMAIN-SUFFIX,javdb.com
+  - DOMAIN-SUFFIX,javlibrary.com
+  - DOMAIN-SUFFIX,avgle.com
+  - DOMAIN-SUFFIX,surrit.com
+  - DOMAIN-SUFFIX,tsumino.com
+  - DOMAIN-SUFFIX,anchira.to

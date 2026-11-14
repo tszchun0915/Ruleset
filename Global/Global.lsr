@@ -3,7 +3,7 @@
 # DESC: 日常國際 App（Google、YouTube、Meta、X、Telegram、串流等）→ 🚀 Default。唔收中國 App（見 CN）
 # 建議策略: 🚀 Default
 # UPDATED: 2026-11-14 (Asia/Hong_Kong)
-# TOTAL: 162
+# TOTAL: 175
 # SOURCES:
 #   - blackmatrix7 Google／YouTube／Twitter／Instagram／Facebook／Whatsapp／Telegram／Reddit／Wikipedia／Spotify／Netflix／Disney 主域名（2026-11-02）
 #   - Telegram Emby 伺服器討論（2026-11-03）：圖片／預告 CDN；UHD 點播主機走 🚀 Default
@@ -15,7 +15,7 @@
 #   - Telegram REX 模組研討（2026-11-11）：Rex 直播電視 rex.livetv.gslb（Bolinxxlin）串流 IP／域名同封面 images.weserv.nl；upload.wikimedia.org 已由 wikimedia.org 覆蓋
 #   - Telegram REX 模組研討（2026-11-13）：模組作者代理主機（封面／播放）走 🚀 Default
 #   - Telegram REX 模組研討（2026-11-13 下午）：51吃瓜 v1.0.0（廿二日）官方 pin「建议将 chigua.com 加入代理规则」，封面／播放走 🚀 Default
-#   - 由 Direct 搬入（2026-11-14）：瞬影彈幕 dm.syemby.com 走 🚀 Default。大陸 Direct 去唔到。只收 dm.syemby.com，唔收成個 syemby.com
+#   - 由 Direct 搬入（2026-11-14）：國際圖庫／圖板同瞬影彈幕 dm.syemby.com 走 🚀 Default。家居 VPN／家居光纖已經夠快，大陸同香港都用 Default，唔強制美國節點。日本片商／CDN／JAV 索引去 Japan。只收 dm.syemby.com，唔收成個 syemby.com
 # CHANGELOG:
 #   - 2026-11-02: 初版。只收日常後綴；唔收廣告域名、IP 大段、國家 TLD 全表、amazonaws
 #   - 唔收已有專門策略嘅網域：PayPal（Bank(HK)）、Grok（AI-HK-Allow）、AI／Discord／LINE／TikTok／GitHub
@@ -30,7 +30,7 @@
 #   - 2026-11-11: Rex 直播電視（rex.livetv.gslb）串流／封面走 🚀 Default：9 條 IP-CIDR /32（精確地址，唔係 IP 大段）、DOMAIN bztv.tvbus.cc、phoneal.qing.mgtv.com、images.weserv.nl。upload.wikimedia.org 已由 DOMAIN-SUFFIX,wikimedia.org 覆蓋，唔再重複。phoneal.qing.mgtv.com 用精確 DOMAIN，蓋過 CN 嘅 DOMAIN-SUFFIX,mgtv.com（主配置 CN 喺 Global 之後，呢條先中並走 Default）；唔改 CN。唔收成個 tvbus.cc
 #   - 2026-11-13: 模組作者代理主機（封面／播放）走 🚀 Default：huangguoai.com、pic.drleao.cn、rihjeyuvw.cc、hzjvlo.cn。只收 pic.drleao.cn，唔收成個 drleao.cn。pic.drleao.cn、hzjvlo.cn 放 Global，先於 CN／GEOIP CN 中並走 Default；唔改 CN
 #   - 2026-11-13: 51吃瓜 v1.0.0（廿二日）封面／播放走 🚀 Default：chigua.com。只收官方 pin 嘅 chigua.com，唔收 Worker 註解入面嘅 51cg1.com 或其他 referer／fallback。chigua.com 放 Global，先於 CN／GEOIP CN 中並走 Default；唔改 CN
-#   - 2026-11-14: 由 Direct 搬入瞬影彈幕走 🚀 Default：dm.syemby.com。大陸 Direct 去唔到。只收 dm.syemby.com，唔收成個 syemby.com。唔放 Emby-Extra
+#   - 2026-11-14: 由 Direct 搬入，走 🚀 Default：nhentai.net、hitomi.la、e-hentai.org、exhentai.org、ehgt.org、hath.network、hentaifox.com、imhentai.xxx、simply-hentai.com、kemono.su、kemono.party、coomer.su、rule34.xxx，同瞬影彈幕 dm.syemby.com。家居 VPN／家居光纖已經夠快，大陸同香港都用 Default，唔強制美國節點。日本片商／CDN／JAV 索引去 Japan。只收 dm.syemby.com，唔收成個 syemby.com。唔放 Emby-Extra
 
 # === Google / YouTube ===
 DOMAIN-SUFFIX,google.com
@@ -222,6 +222,21 @@ DOMAIN-SUFFIX,pic.drleao.cn
 DOMAIN-SUFFIX,rihjeyuvw.cc
 DOMAIN-SUFFIX,hzjvlo.cn
 DOMAIN-SUFFIX,chigua.com
+
+# === 國際圖庫／圖板（🚀 Default；大陸同香港都走 Default，唔強制美國節點） ===
+DOMAIN-SUFFIX,nhentai.net
+DOMAIN-SUFFIX,hitomi.la
+DOMAIN-SUFFIX,e-hentai.org
+DOMAIN-SUFFIX,exhentai.org
+DOMAIN-SUFFIX,ehgt.org
+DOMAIN-SUFFIX,hath.network
+DOMAIN-SUFFIX,hentaifox.com
+DOMAIN-SUFFIX,imhentai.xxx
+DOMAIN-SUFFIX,simply-hentai.com
+DOMAIN-SUFFIX,kemono.su
+DOMAIN-SUFFIX,kemono.party
+DOMAIN-SUFFIX,coomer.su
+DOMAIN-SUFFIX,rule34.xxx
 
 # === 瞬影彈幕（🚀 Default） ===
 DOMAIN-SUFFIX,dm.syemby.com

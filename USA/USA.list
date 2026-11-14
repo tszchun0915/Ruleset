@@ -2,13 +2,12 @@
 # FORMAT: Shadowrocket RULE-SET (.list)
 # DESC: 必須美國節點
 # 建議策略: 🇺🇸 USA
-# UPDATED: 2026-11-14 (Asia/Hong_Kong)
-# TOTAL: 39
+# UPDATED: 2026-11-04 (Asia/Hong_Kong)
+# TOTAL: 26
 # SOURCES:
 #   - github.com/tszchun0915/Clash (你原本嘅 Clash 規則) USA.yaml
 #   - github.com/tszchun0915/Shadowrocket (你原本嘅 Shadowrocket 規則) USA.list
 # CHANGELOG:
-#   - 2026-11-14：由 Direct 搬入國際圖庫／圖板（大陸 Direct 去唔到）→ 🇺🇸 USA：nhentai.net、hitomi.la、e-hentai.org、exhentai.org、ehgt.org、hath.network、hentaifox.com、imhentai.xxx、simply-hentai.com、kemono.su、kemono.party、coomer.su、rule34.xxx
 #   - 修正 IP-CIDR 冇 /32 前綴（Clash/Mihomo 會報錯）
 
 DOMAIN-SUFFIX,glowp.xyz
@@ -37,18 +36,3 @@ DOMAIN-SUFFIX,danbooru.donmai.us
 DOMAIN-SUFFIX,gelbooru.com
 DOMAIN-SUFFIX,sankakucomplex.com
 DOMAIN-SUFFIX,chan.sankakucomplex.com
-
-# 由 Direct 搬入：國際圖庫／圖板（大陸 Direct 去唔到）
-DOMAIN-SUFFIX,nhentai.net
-DOMAIN-SUFFIX,hitomi.la
-DOMAIN-SUFFIX,e-hentai.org
-DOMAIN-SUFFIX,exhentai.org
-DOMAIN-SUFFIX,ehgt.org
-DOMAIN-SUFFIX,hath.network
-DOMAIN-SUFFIX,hentaifox.com
-DOMAIN-SUFFIX,imhentai.xxx
-DOMAIN-SUFFIX,simply-hentai.com
-DOMAIN-SUFFIX,kemono.su
-DOMAIN-SUFFIX,kemono.party
-DOMAIN-SUFFIX,coomer.su
-DOMAIN-SUFFIX,rule34.xxx

@@ -2,8 +2,8 @@
 # FORMAT: Loon Remote Rule (.lsr)
 # DESC: 日常國際 App（Google、YouTube、Meta、X、Telegram、串流等）→ 🚀 Default。唔收中國 App（見 CN）
 # 建議策略: 🚀 Default
-# UPDATED: 2026-11-16 (Asia/Hong_Kong)
-# TOTAL: 183
+# UPDATED: 2026-11-18 (Asia/Hong_Kong)
+# TOTAL: 184
 # SOURCES:
 #   - blackmatrix7 Google／YouTube／Twitter／Instagram／Facebook／Whatsapp／Telegram／Reddit／Wikipedia／Spotify／Netflix／Disney 主域名（2026-11-02）
 #   - Telegram Emby 伺服器討論（2026-11-03）：圖片／預告 CDN；UHD 點播主機走 🚀 Default
@@ -18,6 +18,7 @@
 #   - 由 Direct 搬入（2026-11-14）：國際圖庫／圖板同瞬影彈幕 dm.syemby.com 走 🚀 Default。家居 VPN／家居光纖已經夠快，大陸同香港都用 Default，唔強制美國節點。日本片商／CDN／JAV 索引去 Japan。只收 dm.syemby.com，唔收成個 syemby.com
 #   - Telegram REX 模組研討（2026-11-16 早上 02:26）：HQporner-1.0.0.js（REX 模块分享轉發）caption「加入代理分流规则」，封面／播放走 🚀 Default
 #   - Telegram REX 模組研討／REX 模块分享（2026-11-16 下午 13:40）：黃果短劇模組 v2.3.10 官方 worker-huangguo.js allowlist，封面走 🚀 Default
+#   - Telegram REX 模組研討（2026-11-17 晚上 23:50）：「Rex官方模块制作Skill和测试」，官方模組測試／Skill modules.rexnow.app（瀏覽器跑 Rex 模組）同加密頁 rexnow.tv/encrypt/，模組測試走 🚀 Default
 # CHANGELOG:
 #   - 2026-11-02: 初版。只收日常後綴；唔收廣告域名、IP 大段、國家 TLD 全表、amazonaws
 #   - 唔收已有專門策略嘅網域：PayPal（Bank(HK)）、Grok（AI-HK-Allow）、AI／Discord／LINE／TikTok／GitHub
@@ -35,6 +36,7 @@
 #   - 2026-11-14: 由 Direct 搬入，走 🚀 Default：nhentai.net、hitomi.la、e-hentai.org、exhentai.org、ehgt.org、hath.network、hentaifox.com、imhentai.xxx、simply-hentai.com、kemono.su、kemono.party、coomer.su、rule34.xxx，同瞬影彈幕 dm.syemby.com。家居 VPN／家居光纖已經夠快，大陸同香港都用 Default，唔強制美國節點。日本片商／CDN／JAV 索引去 Japan。只收 dm.syemby.com，唔收成個 syemby.com。唔放 Emby-Extra
 #   - 2026-11-16: HQporner-1.0.0 封面／播放走 🚀 Default：hqporner.com、mydaddy.cc、bigcdn.cc。只收 caption「加入代理分流规则」三條 DOMAIN-SUFFIX；fastporndelivery.hqporner.com 已由 DOMAIN-SUFFIX,hqporner.com 覆蓋，唔另加。caption「原生直连与来源隔离」係模組內 Rex Header 直連圖床提示，唔放入 Direct。國際 18+ 片源，唔放 Japan／USA／Emby-Extra／CN。三條放 Global，先於 CN／GEOIP CN 中並走 Default；唔改 CN
 #   - 2026-11-16: 黃果 v2.3.10 封面 CDN 走 🚀 Default：pic.fisawck.cn、pic.tuafjz.cn、expose.eisees.com、pic.tkzdds.cn、pic.wirqed.cn。只收官方 worker-huangguo.js allowlist 入面未有嘅五條 DOMAIN-SUFFIX；huangguoai.com、pic.drleao.cn 已有，唔重複。唔收 workers.dev，唔收成個 fisawck.cn／tuafjz.cn／eisees.com／tkzdds.cn／wirqed.cn／drleao.cn。五條放 Global，先於 CN／GEOIP CN 中並走 Default；唔改 CN
+#   - 2026-11-18: Rex 官方模組測試／Skill 同 Mac(beta) 更新主機走 🚀 Default：rexnow.app。只收一條 DOMAIN-SUFFIX,rexnow.app；modules.rexnow.app、updates.rexnow.app 已由 rexnow.app 覆蓋。rexnow.tv 已有，唔重複。唔收 workers.dev（rex-widgets-hub.xiaoxiao010815.workers.dev）、awaw.cc、raw.githubusercontent.com、shifter.io、muse.ai、chapanda.us.ci。放 Global，先於 CN／GEOIP CN 中並走 Default；唔改 CN
 
 # === Google / YouTube ===
 DOMAIN-SUFFIX,google.com
@@ -171,6 +173,7 @@ DOMAIN-SUFFIX,image.tmdb.org
 DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,unpkg.com
 DOMAIN-SUFFIX,rexnow.tv
+DOMAIN-SUFFIX,rexnow.app
 DOMAIN-SUFFIX,forwardplayer.com
 DOMAIN-SUFFIX,danmu.icu
 DOMAIN-SUFFIX,danmaku.weeblify.app
